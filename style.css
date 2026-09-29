@@ -1,11 +1,32 @@
+/* =========================================================
+   MEOWTAKE'S CAT & BOOK CAFÉ
+   MAIN STYLESHEET
+========================================================= */
+
+
+/* =========================================================
+   COLOR PALETTE
+========================================================= */
+
 :root {
-    --cream: #F3E8D4;
-    --dusty-rose: #A68272;
-    --warm-brown: #A17453;
+    --cream: #f3e8d4;
+    --light-cream: #faf5ec;
+
+    --dusty-rose: #a68272;
+    --warm-brown: #a17453;
+
     --deep-burgundy: #491818;
-    --soft-gray: #8B8B8B;
+
+    --soft-gray: #8b8b8b;
+
     --almost-black: #191918;
 }
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
 * {
     box-sizing: border-box;
 }
@@ -14,27 +35,43 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
 body {
+    width: 100%;
     margin: 0;
 
+    overflow-x: hidden;
+}
+
+body {
     background-color: var(--cream);
+
     color: var(--almost-black);
 
     font-family: "Nunito", sans-serif;
 }
+
 img {
     max-width: 100%;
     height: auto;
 }
 
-html,
-body {
-    width: 100%;
-    overflow-x: hidden;
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Fredoka", sans-serif;
 }
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
 header {
     position: sticky;
     top: 0;
+
     z-index: 1000;
 
     display: flex;
@@ -43,15 +80,23 @@ header {
 
     padding: 16px 6%;
 
-    background-color: rgba(243, 232, 212, 0.95);
+    background-color: rgba(243, 232, 212, 0.96);
 
     border-bottom: 2px solid var(--almost-black);
+}
+
+
+/* ---------- LOGO ---------- */
+
+.logo {
+    color: inherit;
+
+    text-decoration: none;
 }
 
 .logo h1 {
     margin: 0;
 
-    font-family: "Fredoka", sans-serif;
     font-size: 30px;
     font-weight: 700;
 
@@ -63,41 +108,78 @@ header {
 
     font-size: 10px;
     font-weight: 700;
+
     letter-spacing: 2px;
+
     text-transform: uppercase;
 
     color: var(--warm-brown);
 }
 
-nav {
+
+/* ---------- DESKTOP NAVIGATION ---------- */
+
+.main-nav {
     display: flex;
     align-items: center;
+
     gap: 8px;
 }
 
-nav a {
+.main-nav a {
     padding: 8px 12px;
+
+    border-radius: 20px;
 
     color: var(--almost-black);
 
     text-decoration: none;
 
     font-family: "Fredoka", sans-serif;
+
     font-size: 14px;
     font-weight: 500;
 
-    border-radius: 20px;
-
-    transition: 0.2s ease;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
-nav a:hover {
+.main-nav a:hover {
     background-color: var(--dusty-rose);
 
     color: var(--deep-burgundy);
 
     transform: translateY(-2px);
 }
+
+
+/* ---------- MOBILE MENU BUTTON ---------- */
+
+.menu-toggle {
+    display: none;
+
+    padding: 5px;
+
+    background: none;
+
+    border: none;
+
+    color: var(--deep-burgundy);
+
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
 .hero {
     width: 100%;
     max-width: 1400px;
@@ -105,59 +187,41 @@ nav a:hover {
     margin: 0 auto;
 
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 
     align-items: center;
+
     gap: 80px;
 
     padding: 90px 7% 100px;
 }
+
+
+/* ---------- HERO TEXT ---------- */
 
 .hero-text {
     max-width: 600px;
 }
 
 .eyebrow {
-    margin-bottom: 20px;
+    margin: 0 0 20px;
 
     font-size: 12px;
+
     letter-spacing: 3px;
 
     color: var(--warm-brown);
 }
 
-.hero-brand {
-    display: inline-flex;
-    flex-direction: column;
-
-    margin-bottom: 28px;
-
-    padding: 10px 16px;
-
-    border: 2px solid var(--deep-burgundy);
-    border-radius: 4px;
-
-    color: var(--deep-burgundy);
-}
-
-.hero-brand span {
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.hero-brand small {
-    margin-top: 3px;
-
-    font-size: 8px;
-    letter-spacing: 2px;
-}
-
 .hero h2 {
     margin: 0;
 
-    font-size: 58px;
+    font-size: clamp(48px, 5vw, 72px);
+
     line-height: 1.05;
+
+    font-weight: 700;
 
     color: var(--almost-black);
 }
@@ -167,18 +231,23 @@ nav a:hover {
 }
 
 .hero-description {
-    max-width: 500px;
+    max-width: 520px;
 
     margin-top: 25px;
 
-    font-size: 18px;
+    font-size: 16px;
+
     line-height: 1.7;
 
-    color: #5b514c;
+    color: #625651;
 }
+
+
+/* ---------- HERO BUTTONS ---------- */
 
 .hero-buttons {
     display: flex;
+
     gap: 15px;
 
     margin-top: 30px;
@@ -189,81 +258,116 @@ nav a:hover {
 
     padding: 13px 22px;
 
+    border: 2px solid var(--deep-burgundy);
+
     text-decoration: none;
 
-    border: 2px solid var(--deep-burgundy);
+    font-family: "Fredoka", sans-serif;
 
     font-size: 14px;
 
-    transition: 0.2s;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
 }
 
 .primary-button {
     background-color: var(--deep-burgundy);
+
     color: var(--cream);
 }
 
 .primary-button:hover {
     background-color: var(--almost-black);
+
     border-color: var(--almost-black);
 }
 
 .secondary-button {
-    color: var(--deep-burgundy);
     background-color: transparent;
+
+    color: var(--deep-burgundy);
 }
 
 .secondary-button:hover {
     background-color: var(--dusty-rose);
 }
 
-.hero-note {
-    background-color: var(--dusty-rose);
+
+/* ---------- HERO IMAGE ---------- */
+
+.hero-image {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.hero-image img {
+    display: block;
+
+    width: 100%;
+
+    max-width: 600px;
 
     border: 3px solid var(--almost-black);
-    border-radius: 25px;
 
-    padding: 45px 35px;
+    border-radius: 22px;
 
-    transform: rotate(3deg);
-
-    box-shadow: 8px 8px 0 var(--warm-brown);
+    box-shadow: 12px 12px 0 var(--warm-brown);
 }
 
-.note-small {
-    margin: 0;
 
-    font-size: 11px;
-    letter-spacing: 3px;
+/* =========================================================
+   SHARED SECTION STYLES
+========================================================= */
 
-    color: var(--deep-burgundy);
-}
+.cats-section,
+.menu-section,
+.staff-section,
+.journal-section,
+.visit-section {
+    width: 100%;
 
-.note-text {
-    margin: 20px 0;
-
-    font-size: 30px;
-    line-height: 1.4;
-}
-
-.paw {
-    font-size: 35px;
-    color: var(--deep-burgundy);
-}
-.cats-section {
     padding: 80px 8%;
-    background-color: #faf5ec;
 }
+
+.cats-section,
+.staff-section,
+.visit-section {
+    background-color: var(--light-cream);
+}
+
+.menu-section,
+.journal-section {
+    background-color: var(--cream);
+}
+
+
+/* ---------- SECTION HEADINGS ---------- */
 
 .section-heading {
-    max-width: 600px;
+    max-width: 650px;
+
     margin-bottom: 40px;
 }
 
-.section-heading p {
+.section-heading > p {
     margin: 0 0 10px;
 
+    font-family: "Fredoka", sans-serif;
+
     font-size: 11px;
+    font-weight: 600;
+
     letter-spacing: 3px;
 
     color: var(--warm-brown);
@@ -272,43 +376,66 @@ nav a:hover {
 .section-heading h2 {
     margin: 0;
 
-    font-size: 42px;
+    font-size: 46px;
+
+    font-weight: 600;
+
+    line-height: 1.1;
 
     color: var(--deep-burgundy);
 }
 
-.section-heading span {
+.section-heading > span {
     display: block;
 
     margin-top: 12px;
 
+    font-size: 16px;
+
     line-height: 1.6;
+
+    color: #625651;
 }
+
+
+/* =========================================================
+   OUR CATS
+========================================================= */
 
 .cats-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
 
     width: 100%;
 }
 
 .cat-card {
-    padding: 10px;
+    padding: 9px;
 
     background-color: var(--cream);
 
     border: 2px solid var(--almost-black);
+
     border-radius: 20px;
 
     box-shadow: 7px 7px 0 var(--dusty-rose);
 
-    transition: transform 0.2s ease;
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .cat-card:hover {
     transform: translateY(-6px) rotate(-1deg);
+
+    box-shadow: 10px 10px 0 var(--dusty-rose);
 }
+
 .cat-profile {
     display: block;
 
@@ -318,148 +445,216 @@ nav a:hover {
     border-radius: 13px;
 }
 
-.menu-section {
-    padding: 80px 8%;
 
-    background-color: var(--cream);
+/* =========================================================
+   MENU
+========================================================= */
+
+/* ---------- FILTERS ---------- */
+
+.menu-filters {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 30px 0 35px;
 }
 
-.menu-grid {
-    display: grid;
+.menu-filter {
+    padding: 9px 17px;
 
-    grid-template-columns: repeat(2, 1fr);
+    background-color: transparent;
 
-    gap: 25px;
-}
+    border: 2px solid var(--deep-burgundy);
 
-.menu-category {
-    padding: 30px;
-
-    background-color: #f7eddc;
-
-    border: 2px solid var(--almost-black);
-    border-radius: 18px;
-}
-
-.menu-category h3 {
-    margin: 0 0 25px;
-
-    font-size: 28px;
+    border-radius: 30px;
 
     color: var(--deep-burgundy);
+
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
-.menu-item {
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    padding: 10px 0;
-
-    border-bottom: 1px dotted var(--soft-gray);
-}
-
-.menu-item:last-child {
-    border-bottom: none;
-}
-
-.menu-note {
-    margin-top: -15px;
-    margin-bottom: 20px;
-
-    color: var(--warm-brown);
-
-    font-style: italic;
-}
-
-.kitten-menu {
+.menu-filter:hover {
     background-color: var(--dusty-rose);
+
+    transform: translateY(-2px);
 }
-.staff-section {
-    padding: 80px 8%;
-    background-color: #faf5ec;
+
+.menu-filter.active {
+    background-color: var(--deep-burgundy);
+
+    color: var(--cream);
 }
+
+
+/* ---------- MENU GALLERY ---------- */
+
+/*
+    Desktop:
+    3 menus on first row
+    2 menus centered underneath
+*/
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 28px;
+
+    width: 100%;
+}
+
+
+/* ---------- MENU CARD ---------- */
+
+.menu-category {
+    flex: 0 1 calc((100% - 56px) / 3);
+
+    min-width: 0;
+    max-width: none;
+
+    padding: 10px;
+
+    background-color: var(--light-cream);
+
+    border: 2px solid var(--almost-black);
+    border-radius: 22px;
+
+    box-shadow:
+        7px 7px 0 var(--dusty-rose),
+        0 12px 25px rgba(25, 25, 24, 0.08);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.menu-category:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        10px 10px 0 var(--dusty-rose),
+        0 16px 30px rgba(25, 25, 24, 0.12);
+}
+
+
+/* used by the menu filters */
+
+.menu-category.hidden {
+    display: none;
+}
+
+
+/* ---------- MENU IMAGE ---------- */
+
+.menu-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border: 2px solid var(--almost-black);
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    transition: transform 0.25s ease;
+}
+
+
+.menu-image:hover {
+    transform: scale(1.01);
+}
+
+
+/* =========================================================
+   STAFF
+========================================================= */
 
 .staff-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
     gap: 25px;
 }
 
 .staff-card {
-    position: relative;
+    display: flex;
+    flex-direction: column;
 
     padding: 35px;
 
     background-color: var(--cream);
 
     border: 2px solid var(--almost-black);
+
     border-radius: 18px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
-.staff-number {
-    margin-bottom: 30px;
+.staff-card:hover {
+    transform: translateY(-5px);
 
-    font-size: 12px;
-    letter-spacing: 3px;
+    box-shadow: 7px 7px 0 var(--dusty-rose);
+}
+.staff-photo-wrapper {
+    width: 100%;
 
-    color: var(--warm-brown);
+    margin-bottom: 25px;
+
+    overflow: hidden;
+
+    border: 2px solid var(--almost-black);
+    border-radius: 16px;
+
+    background-color: var(--dusty-rose);
 }
 
-.staff-card h3 {
-    margin: 0;
+.staff-photo {
+    display: block;
 
-    font-size: 30px;
+    width: 100%;
+    aspect-ratio: 4 / 5;
 
-    color: var(--deep-burgundy);
+    object-fit: cover;
+    object-position: center top;
+
+    transition: transform 0.35s ease;
 }
 
-.staff-role {
-    margin: 8px 0 20px;
-
-    font-weight: bold;
-
-    color: var(--warm-brown);
+.staff-card:hover .staff-photo {
+    transform: scale(1.035);
 }
 
-.staff-description {
-    line-height: 1.7;
-}
 
-.staff-tag {
-    display: inline-block;
-
-    margin-top: 20px;
-
-    padding: 7px 12px;
-
-    border: 1px solid var(--deep-burgundy);
-    border-radius: 20px;
-
-    color: var(--deep-burgundy);
-
-    font-size: 12px;
-}
-
-.staff-disclaimer {
-    margin-top: 18px;
-
-    font-size: 11px;
-    font-style: italic;
-
-    color: var(--soft-gray);
-}
-.journal-section {
-    padding: 80px 8%;
-    background-color: var(--cream);
-}
+/* =========================================================
+   CAFÉ JOURNAL
+========================================================= */
 
 .journal-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     gap: 25px;
 }
@@ -467,16 +662,28 @@ nav a:hover {
 .journal-card {
     padding: 30px;
 
-    background-color: #faf5ec;
+    background-color: var(--light-cream);
 
     border: 2px solid var(--almost-black);
+
     border-radius: 18px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.journal-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 7px 7px 0 var(--dusty-rose);
 }
 
 .journal-date {
     margin: 0 0 20px;
 
     font-size: 11px;
+
     letter-spacing: 2px;
 
     color: var(--warm-brown);
@@ -502,16 +709,18 @@ nav a:hover {
     padding: 6px 10px;
 
     border: 1px solid var(--warm-brown);
+
     border-radius: 20px;
 
     font-size: 11px;
 
     color: var(--warm-brown);
 }
-.visit-section {
-    padding: 80px 8%;
-    background-color: #faf5ec;
-}
+
+
+/* =========================================================
+   VISIT US
+========================================================= */
 
 .visit-grid {
     display: grid;
@@ -523,12 +732,16 @@ nav a:hover {
     align-items: start;
 }
 
+
+/* ---------- CAFÉ INFORMATION ---------- */
+
 .visit-info {
     padding: 35px;
 
     background-color: var(--cream);
 
     border: 2px solid var(--almost-black);
+
     border-radius: 18px;
 }
 
@@ -540,9 +753,18 @@ nav a:hover {
     color: var(--deep-burgundy);
 }
 
+.visit-location {
+    font-weight: 700;
+
+    color: var(--warm-brown);
+}
+
 .visit-info p {
     line-height: 1.7;
 }
+
+
+/* ---------- OPENING HOURS ---------- */
 
 .opening-hours {
     margin-top: 30px;
@@ -568,93 +790,8 @@ nav a:hover {
     border-bottom: 1px dotted var(--soft-gray);
 }
 
-.house-rules {
-    padding: 35px;
 
-    background-color: var(--dusty-rose);
-
-    border: 2px solid var(--almost-black);
-    border-radius: 18px;
-}
-
-.rules-title {
-    margin-top: 0;
-
-    font-size: 12px;
-    letter-spacing: 3px;
-
-    color: var(--deep-burgundy);
-}
-
-.house-rules ul {
-    padding-left: 20px;
-    margin-bottom: 0;
-}
-
-.house-rules li {
-    margin-bottom: 12px;
-
-    line-height: 1.5;
-}
-.visit-section {
-    padding: 80px 8%;
-    background-color: white;
-}
-
-.visit-grid {
-    display: grid;
-
-    grid-template-columns: 1.2fr 0.8fr;
-
-    gap: 40px;
-
-    align-items: start;
-}
-
-.visit-info {
-    padding: 35px;
-
-    background-color: var(--cream);
-
-    border: 2px solid var(--almost-black);
-    border-radius: 18px;
-}
-
-.visit-info h3 {
-    margin-top: 0;
-
-    font-size: 28px;
-
-    color: var(--deep-burgundy);
-}
-
-.visit-info p {
-    line-height: 1.7;
-}
-
-.opening-hours {
-    margin-top: 30px;
-}
-
-.opening-hours h4 {
-    margin-bottom: 15px;
-
-    font-size: 18px;
-
-    color: var(--deep-burgundy);
-}
-
-.hours-row {
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    padding: 8px 0;
-
-    border-bottom: 1px dotted var(--soft-gray);
-}
+/* ---------- HOUSE RULES ---------- */
 
 .house-rules {
     padding: 35px;
@@ -662,6 +799,7 @@ nav a:hover {
     background-color: var(--dusty-rose);
 
     border: 2px solid var(--almost-black);
+
     border-radius: 18px;
 }
 
@@ -669,14 +807,18 @@ nav a:hover {
     margin-top: 0;
 
     font-size: 12px;
+
+    font-weight: 700;
+
     letter-spacing: 3px;
 
     color: var(--deep-burgundy);
 }
 
 .house-rules ul {
-    padding-left: 20px;
     margin-bottom: 0;
+
+    padding-left: 20px;
 }
 
 .house-rules li {
@@ -684,131 +826,104 @@ nav a:hover {
 
     line-height: 1.5;
 }
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
 footer {
-    padding: 50px 8%;
+    padding: 60px 8%;
+
     text-align: center;
 
     background-color: var(--almost-black);
+
     color: var(--cream);
 }
 
 .footer-brand h2 {
     margin: 0;
-    font-size: 28px;
+
+    font-size: 32px;
+
+    color: var(--cream);
 }
 
 .footer-brand p {
-    margin-top: 5px;
+    margin: 5px 0 0;
 
-    font-size: 12px;
-    letter-spacing: 2px;
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: var(--dusty-rose);
 }
 
 .footer-message {
-    margin: 25px auto;
-
     max-width: 500px;
 
-    line-height: 1.6;
+    margin: 25px auto;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #e8ddcf;
+}
+
+.footer-divider {
+    margin: 25px 0;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 28px;
+
+    color: var(--dusty-rose);
 }
 
 .footer-copy {
-    margin-bottom: 0;
+    margin: 0;
 
     font-size: 11px;
 
+    letter-spacing: 1px;
+
     color: var(--soft-gray);
 }
-h1,
-h2,
-h3,
-h4 {
-    font-family: "Fredoka", sans-serif;
-}
 
-.section-heading h2 {
-    font-family: "Fredoka", sans-serif;
 
-    font-size: 46px;
-    font-weight: 600;
-
-    color: var(--deep-burgundy);
-}
-
-.section-heading > p {
-    font-family: "Fredoka", sans-serif;
-    font-weight: 600;
-
-    color: var(--warm-brown);
-}
-
-.section-heading > span {
-    font-size: 16px;
-
-    color: #625651;
-}
-.hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-image img {
-    display: block;
-
-    width: 100%;
-    max-width: 600px;
-
-    border: 3px solid var(--almost-black);
-    border-radius: 22px;
-
-    box-shadow: 12px 12px 0 var(--warm-brown);
-}
-.hero h2 {
-    margin: 0;
-
-    font-family: "Fredoka", sans-serif;
-    font-size: clamp(48px, 5vw, 72px);
-    line-height: 1.05;
-
-    color: var(--almost-black);
-}
-
-.hero h2 span {
-    color: var(--deep-burgundy);
-}
-.hero-description {
-    max-width: 520px;
-
-    margin-top: 25px;
-
-    font-size: 16px;
-    line-height: 1.7;
-
-    color: #625651;
-}
-/* =========================================
+/* =========================================================
    TABLET
-   ========================================= */
+========================================================= */
 
 @media (max-width: 1100px) {
+
+    /* ---------- HEADER ---------- */
 
     header {
         padding-left: 4%;
         padding-right: 4%;
     }
 
-    nav {
+    .main-nav {
         gap: 4px;
     }
 
-    nav a {
+    .main-nav a {
         padding: 7px 9px;
+
         font-size: 13px;
     }
 
+
+    /* ---------- HERO ---------- */
+
     .hero {
         gap: 50px;
+
         padding: 75px 5% 85px;
     }
 
@@ -820,48 +935,64 @@ h4 {
         max-width: 520px;
     }
 
+
+    /* ---------- CATS ---------- */
+
     .cats-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .menu-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+
+    /* ---------- MENU ---------- */
+
+    .menu-category {
+    flex-basis: calc((100% - 25px) / 2);
+}
+
+
+    /* ---------- STAFF ---------- */
 
     .staff-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+
+    /* ---------- JOURNAL ---------- */
+
     .journal-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 
-/* =========================================
+/* =========================================================
    MOBILE
-   ========================================= */
+========================================================= */
 
 @media (max-width: 768px) {
 
-    /* ---------- HEADER ---------- */
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
 
     header {
         position: sticky;
-        top: 0;
-        z-index: 1000;
 
-        flex-direction: column;
-        justify-content: center;
+        top: 0;
+
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: space-between;
         align-items: center;
 
-        gap: 14px;
-
-        padding: 18px 18px;
+        padding: 16px 20px;
     }
 
     .logo {
-        text-align: center;
+        text-align: left;
     }
 
     .logo h1 {
@@ -870,29 +1001,65 @@ h4 {
 
     .logo p {
         font-size: 9px;
+
         letter-spacing: 1.5px;
     }
 
-    nav {
+
+    /* ---------- HAMBURGER ---------- */
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    /* ---------- MOBILE NAVIGATION ---------- */
+
+    .main-nav {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
         width: 100%;
 
+        display: none;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 12px 20px 18px;
+
+        background-color: var(--cream);
+
+        border-bottom: 2px solid var(--almost-black);
+    }
+
+    .main-nav.active {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        gap: 5px 7px;
     }
 
-    nav a {
-        padding: 6px 9px;
+    .main-nav a {
+        width: 100%;
 
-        font-size: 12px;
+        padding: 11px 5px;
 
-        border-radius: 18px;
+        text-align: center;
+
+        font-size: 13px;
+
+        border-radius: 12px;
+    }
+
+    .main-nav a:hover {
+        background-color: var(--dusty-rose);
     }
 
 
-    /* ---------- HERO ---------- */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .hero {
         width: 100%;
@@ -916,11 +1083,13 @@ h4 {
         text-align: center;
 
         font-size: 10px;
+
         letter-spacing: 2.5px;
     }
 
     .hero h2 {
         font-size: 48px;
+
         line-height: 1.05;
     }
 
@@ -930,7 +1099,6 @@ h4 {
         margin: 24px auto 0;
 
         font-size: 15px;
-        line-height: 1.7;
     }
 
     .hero-buttons {
@@ -949,12 +1117,9 @@ h4 {
         font-size: 13px;
     }
 
-    .hero-image {
-        width: 100%;
-    }
-
     .hero-image img {
         width: 100%;
+
         max-width: 520px;
 
         border-radius: 18px;
@@ -963,7 +1128,9 @@ h4 {
     }
 
 
-    /* ---------- ALL SECTIONS ---------- */
+    /* =====================================================
+       SECTIONS
+    ===================================================== */
 
     .cats-section,
     .menu-section,
@@ -981,21 +1148,22 @@ h4 {
 
     .section-heading h2 {
         font-size: 38px;
-        line-height: 1.1;
     }
 
     .section-heading > p {
         font-size: 10px;
+
         letter-spacing: 2.5px;
     }
 
     .section-heading > span {
         font-size: 15px;
-        line-height: 1.6;
     }
 
 
-    /* ---------- CATS ---------- */
+    /* =====================================================
+       CATS
+    ===================================================== */
 
     .cats-grid {
         grid-template-columns: 1fr;
@@ -1005,6 +1173,7 @@ h4 {
 
     .cat-card {
         width: 100%;
+
         max-width: 520px;
 
         margin: 0 auto;
@@ -1016,83 +1185,63 @@ h4 {
         box-shadow: 6px 6px 0 var(--dusty-rose);
     }
 
-    .cat-profile {
-        width: 100%;
 
-        border-radius: 12px;
+    /* =====================================================
+       MENU
+    ===================================================== */
+
+    .menu-filters {
+        justify-content: center;
+
+        gap: 8px;
+
+        margin-bottom: 25px;
     }
 
+    .menu-filter {
+        padding: 8px 13px;
 
-    /* ---------- MENU ---------- */
-
-    .menu-grid {
-        grid-template-columns: 1fr;
-
-        gap: 22px;
+        font-size: 12px;
     }
 
-    .menu-category {
-        padding: 25px;
+  .menu-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-        border-radius: 17px;
-    }
+    gap: 28px;
+}
 
-    .menu-category h3 {
-        margin-bottom: 20px;
+.menu-category {
+    width: 100%;
+    max-width: 520px;
 
-        font-size: 25px;
-    }
-
-    .menu-item {
-        gap: 15px;
-
-        padding: 9px 0;
-
-        font-size: 14px;
-    }
-
-    .menu-item span:first-child {
-        max-width: 70%;
-    }
-
-    .menu-item span:last-child {
-        white-space: nowrap;
-    }
-
-    .menu-note {
-        font-size: 13px;
-    }
+    flex-basis: auto;
+}
 
 
-    /* ---------- STAFF ---------- */
+    /* =====================================================
+       STAFF
+    ===================================================== */
+.staff-grid {
+    grid-template-columns: 1fr;
 
-    .staff-grid {
-        grid-template-columns: 1fr;
+    gap: 28px;
+}
 
-        gap: 22px;
-    }
+.staff-card {
+    width: 100%;
+    max-width: 520px;
 
-    .staff-card {
-        padding: 28px;
+    margin: 0 auto;
 
-        border-radius: 18px;
-    }
-
-    .staff-card h3 {
-        font-size: 28px;
-    }
-
-    .staff-description {
-        font-size: 14px;
-        line-height: 1.7;
-    }
-
-    .staff-tag {
-        font-size: 11px;
-    }
+    padding: 9px;
+}
 
 
-    /* ---------- JOURNAL ---------- */
+    /* =====================================================
+       JOURNAL
+    ===================================================== */
 
     .journal-grid {
         grid-template-columns: 1fr;
@@ -1102,8 +1251,6 @@ h4 {
 
     .journal-card {
         padding: 26px;
-
-        border-radius: 18px;
     }
 
     .journal-card h3 {
@@ -1112,11 +1259,12 @@ h4 {
 
     .journal-card p {
         font-size: 14px;
-        line-height: 1.7;
     }
 
 
-    /* ---------- VISIT US ---------- */
+    /* =====================================================
+       VISIT US
+    ===================================================== */
 
     .visit-grid {
         grid-template-columns: 1fr;
@@ -1129,8 +1277,6 @@ h4 {
         width: 100%;
 
         padding: 26px;
-
-        border-radius: 18px;
     }
 
     .visit-info h3 {
@@ -1139,11 +1285,6 @@ h4 {
 
     .visit-info p {
         font-size: 14px;
-        line-height: 1.7;
-    }
-
-    .opening-hours h4 {
-        font-size: 17px;
     }
 
     .hours-row {
@@ -1156,83 +1297,364 @@ h4 {
         font-size: 14px;
     }
 
-    .rules-title {
-        font-size: 10px;
-        letter-spacing: 2.5px;
-    }
-
-    .house-rules ul {
-        padding-left: 18px;
-    }
-
     .house-rules li {
-        margin-bottom: 11px;
-
         font-size: 14px;
+
         line-height: 1.6;
     }
 
 
-    /* ---------- FOOTER ---------- */
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     footer {
-        padding: 45px 24px;
+        padding: 50px 24px;
     }
 
     .footer-brand h2 {
-        font-size: 27px;
-    }
-
-    .footer-brand p {
-        font-size: 10px;
+        font-size: 28px;
     }
 
     .footer-message {
-        max-width: 420px;
-
         font-size: 14px;
-        line-height: 1.6;
     }
+}/* =====================================================
+   JOURNAL PAGE
+===================================================== */
 
-    .footer-copy {
-        font-size: 10px;
-    }
+.journal-hero {
+    padding: 60px 24px 45px;
+}
+
+.journal-hero h1 {
+    font-size: 52px;
+}
+
+.featured-journal-post {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    margin: 0 24px 70px;
+
+    padding: 20px;
+}
+
+.featured-journal-content h2 {
+    font-size: 34px;
+}
+
+.journal-archive {
+    padding: 60px 24px;
+}
+
+.journal-archive-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+}
+
+.journal-card-meta {
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.journal-filters {
+    gap: 8px;
+}
+
+.journal-filter {
+    padding: 8px 13px;
+
+    font-size: 12px;
+}
+
+/* ---------- FEATURED JOURNAL POST ---------- */
+
+.featured-journal-post {
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    max-width: 1250px;
+
+    margin: 0 auto 100px;
+
+    padding: 40px;
+
+    background-color: var(--light-cream);
+
+    border: 2px solid var(--almost-black);
+
+    border-radius: 24px;
+
+    box-shadow: 10px 10px 0 var(--dusty-rose);
+}
+
+.featured-journal-image {
+    overflow: hidden;
+
+    border-radius: 18px;
+}
+
+.featured-journal-image img {
+    display: block;
+
+    width: 100%;
+
+    transition: transform 0.35s ease;
+}
+
+.featured-journal-post:hover .featured-journal-image img {
+    transform: scale(1.025);
+}
+
+.journal-latest {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    background-color: var(--deep-burgundy);
+
+    border-radius: 20px;
+
+    color: var(--cream);
+
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+.featured-journal-content h2 {
+    margin: 15px 0;
+
+    font-size: 42px;
+
+    line-height: 1.05;
+
+    color: var(--deep-burgundy);
+}
+
+.featured-journal-content > p:not(.journal-date) {
+    margin-bottom: 30px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
 }
 
 
-/* =========================================
+/* ---------- JOURNAL ARCHIVE ---------- */
+
+.journal-archive {
+    padding: 80px 8%;
+
+    background-color: var(--light-cream);
+}
+
+
+/* ---------- JOURNAL FILTERS ---------- */
+
+.journal-filters {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 30px 0 40px;
+}
+
+.journal-filter {
+    padding: 9px 17px;
+
+    background: transparent;
+
+    border: 2px solid var(--deep-burgundy);
+
+    border-radius: 30px;
+
+    color: var(--deep-burgundy);
+
+    font-family: "Fredoka", sans-serif;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.journal-filter:hover {
+    background-color: var(--dusty-rose);
+
+    transform: translateY(-2px);
+}
+
+.journal-filter.active {
+    background-color: var(--deep-burgundy);
+
+    color: var(--cream);
+}
+
+
+/* ---------- JOURNAL CARDS ---------- */
+
+.journal-archive-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.journal-post-card {
+    overflow: hidden;
+
+    background-color: var(--cream);
+
+    border: 2px solid var(--almost-black);
+
+    border-radius: 20px;
+
+    box-shadow: 7px 7px 0 var(--dusty-rose);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.journal-post-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 10px 10px 0 var(--dusty-rose);
+}
+
+.journal-post-card.hidden {
+    display: none;
+}
+
+.journal-card-image {
+    overflow: hidden;
+}
+
+.journal-card-image img {
+    display: block;
+
+    width: 100%;
+
+    max-height: 350px;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+.journal-post-card:hover .journal-card-image img {
+    transform: scale(1.025);
+}
+
+.journal-card-content {
+    padding: 28px;
+}
+
+.journal-card-meta {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 18px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: var(--warm-brown);
+}
+
+.journal-card-content h3 {
+    margin: 0 0 12px;
+
+    font-size: 27px;
+
+    color: var(--deep-burgundy);
+}
+
+.journal-card-content p {
+    line-height: 1.7;
+}
+
+.journal-card-content a {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: var(--deep-burgundy);
+
+    text-decoration: none;
+
+    font-family: "Fredoka", sans-serif;
+
+    font-weight: 600;
+
+    transition: transform 0.2s ease;
+}
+
+.journal-card-content a:hover {
+    transform: translateX(5px);
+}
+
+
+/* ---------- HOMEPAGE JOURNAL BUTTON ---------- */
+
+.journal-more {
+    margin-top: 40px;
+
+    text-align: center;
+}
+
+/* =========================================================
    SMALL PHONES
-   ========================================= */
+========================================================= */
 
 @media (max-width: 480px) {
+
 
     /* ---------- HEADER ---------- */
 
     header {
-        padding: 16px 14px;
+        padding: 14px 16px;
     }
 
     .logo h1 {
-        font-size: 25px;
+        font-size: 24px;
     }
 
-    nav {
-        gap: 3px;
-    }
-
-    nav a {
-        padding: 5px 7px;
-
-        font-size: 11px;
+    .menu-toggle {
+        font-size: 26px;
     }
 
 
     /* ---------- HERO ---------- */
 
     .hero {
-        padding: 45px 18px 60px;
-
         gap: 35px;
+
+        padding: 45px 18px 60px;
     }
 
     .hero h2 {
@@ -1249,6 +1671,7 @@ h4 {
 
     .button {
         width: 100%;
+
         max-width: 230px;
 
         text-align: center;
@@ -1263,7 +1686,7 @@ h4 {
     }
 
 
-    /* ---------- GENERAL ---------- */
+    /* ---------- SECTIONS ---------- */
 
     .cats-section,
     .menu-section,
@@ -1282,7 +1705,7 @@ h4 {
     }
 
 
-    /* ---------- CARDS ---------- */
+    /* ---------- CATS ---------- */
 
     .cat-card {
         padding: 7px;
@@ -1290,7 +1713,22 @@ h4 {
         border-radius: 16px;
     }
 
-    .menu-category,
+
+    /* ---------- MENU ---------- */
+
+    .menu-filters {
+        gap: 6px;
+    }
+
+    .menu-filter {
+        padding: 7px 11px;
+
+        font-size: 11px;
+    }
+
+
+    /* ---------- CARDS ---------- */
+
     .staff-card,
     .journal-card,
     .visit-info,
@@ -1298,17 +1736,6 @@ h4 {
         padding: 21px;
 
         border-radius: 16px;
-    }
-
-
-    /* ---------- MENU ---------- */
-
-    .menu-category h3 {
-        font-size: 23px;
-    }
-
-    .menu-item {
-        font-size: 13px;
     }
 
 
@@ -1322,11 +1749,10 @@ h4 {
     /* ---------- FOOTER ---------- */
 
     footer {
-        padding: 40px 18px;
+        padding: 45px 18px;
     }
 
     .footer-message {
         font-size: 13px;
     }
 }
-

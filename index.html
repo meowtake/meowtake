@@ -3,521 +3,865 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Meowtake's Café</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta
+        name="description"
+        content="Meowtake's Cat & Book Café — coffee, books, cats and questionable staff decisions."
+    >
 
-<link
-    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap"
-    rel="stylesheet"
->
-    <link rel="stylesheet" href="style.css">
+    <title>Meowtake's Cat & Book Café</title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- OUR CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-  <body>
+
+    <!-- ========================================
+         HEADER
+    ========================================= -->
 
     <header>
-        <div class="logo">
-            <h1>Meowtake's</h1>
-            <p>Cat & Book Café</p>
-        </div>
 
-        <nav>
-            <a href="#">Home</a>
-            <a href="#cats">Our Cats</a>
-            <a href="#menu">Menu</a>
-            <a href="#staff">Staff</a>
-            <a href="#journal">Journal</a>
-            <a href="#visit">Visit Us</a>
+        <a
+            href="#home"
+            class="logo"
+        >
+
+            <h1>Meowtake's</h1>
+
+            <p>Cat & Book Café</p>
+
+        </a>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+        >
+            ☰
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <nav
+            class="main-nav"
+            id="main-navigation"
+        >
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#cats">
+                Our Cats
+            </a>
+
+            <a href="#menu">
+                Menu
+            </a>
+
+            <a href="#staff">
+                Staff
+            </a>
+
+  <a href="journal.html">
+    Journal
+</a>
+
+            <a href="#visit">
+                Visit Us
+            </a>
+
         </nav>
+
     </header>
+
+
 
     <main>
 
-    <section class="hero">
 
-        <div class="hero-text">
+        <!-- ========================================
+             HERO
+        ========================================= -->
 
-            <p class="eyebrow">TOKYO · EST. 2026</p>
+        <section
+            class="hero"
+            id="home"
+        >
+
+
+            <div class="hero-text">
+
+                <p class="eyebrow">
+                    TOKYO · EST. 2026
+                </p>
+
+
+                <h2>
+                    A coffee.<br>
+                    A book.<br>
+
+                    <span>
+                        And a meow meow.
+                    </span>
+                </h2>
+
+
+                <p class="hero-description">
+                    A quiet corner for coffee, books, and cats who may or may not
+                    judge your reading choices.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#menu"
+                        class="button primary-button"
+                    >
+                        See the menu
+                    </a>
+
+                    <a
+                        href="#cats"
+                        class="button secondary-button"
+                    >
+                        Meet the cats
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <img
+                    src="images/moodboard.jpg"
+                    alt="Meowtake's café moodboard with coffee, books and cats"
+                    fetchpriority="high"
+                >
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ========================================
+             OUR CATS
+        ========================================= -->
+
+        <section
+            class="cats-section"
+            id="cats"
+        >
+
+
+            <div class="section-heading">
+
+                <p>
+                    MEET THE RESIDENTS
+                </p>
+
+                <h2>
+                    Our Cats
+                </h2>
+
+                <span>
+                    The real owners of Meowtake's. We just work here.
+                </span>
+
+            </div>
+
+
+            <div class="cats-grid">
+
+
+                <!-- DAEMON -->
+
+                <article class="cat-card">
+
+                    <img
+                        src="images/daemon.jpg"
+                        alt="Daemon's Meowtake's profile"
+                        class="cat-profile"
+                        loading="lazy"
+                    >
+
+                </article>
+
+
+                <!-- TOFU -->
+
+                <article class="cat-card">
+
+                    <img
+                        src="images/tofu.jpg"
+                        alt="Tofu's Meowtake's profile"
+                        class="cat-profile"
+                        loading="lazy"
+                    >
+
+                </article>
+
+
+                <!-- HARU -->
+
+                <article class="cat-card">
+
+                    <img
+                        src="images/haru.jpg"
+                        alt="Haru's Meowtake's profile"
+                        class="cat-profile"
+                        loading="lazy"
+                    >
+
+                </article>
+
+
+                <!-- DUCHESS -->
+
+                <article class="cat-card">
+
+                    <img
+                        src="images/duchess.jpg"
+                        alt="Duchess' Meowtake's profile"
+                        class="cat-profile"
+                        loading="lazy"
+                    >
+
+                </article>
+
+
+                <!-- FLUFFY -->
+
+                <article class="cat-card">
+
+                    <img
+                        src="images/fluffy.jpg"
+                        alt="Fluffy's Meowtake's profile"
+                        class="cat-profile"
+                        loading="lazy"
+                    >
+
+                </article>
+
+
+                <!-- MALLOW -->
+
+                <article class="cat-card">
+
+                    <img
+                        src="images/mallow.jpg"
+                        alt="Mallow's Meowtake's profile"
+                        class="cat-profile"
+                        loading="lazy"
+                    >
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================
+             MENU
+        ========================================= -->
+
+        <section
+            class="menu-section"
+            id="menu"
+        >
+
+
+            <div class="section-heading">
+
+                <p>
+                    WHAT'S ON THE TABLE
+                </p>
+
+                <h2>
+                    Our Menu
+                </h2>
+
+                <span>
+                    Cat-themed food, coffee, desserts and absolutely no cooking by Ruel.
+                </span>
+
+            </div>
+
+
+
+            <!-- MENU FILTERS -->
+
+            <div class="menu-filters">
+
+                <button
+                    class="menu-filter active"
+                    type="button"
+                    data-filter="all"
+                >
+                    All
+                </button>
+
+                <button
+                    class="menu-filter"
+                    type="button"
+                    data-filter="savory"
+                >
+                    Savory
+                </button>
+
+                <button
+                    class="menu-filter"
+                    type="button"
+                    data-filter="desserts"
+                >
+                    Desserts
+                </button>
+
+                <button
+                    class="menu-filter"
+                    type="button"
+                    data-filter="drinks"
+                >
+                    Drinks
+                </button>
+
+                <button
+                    class="menu-filter"
+                    type="button"
+                    data-filter="kittens"
+                >
+                    Kittens
+                </button>
+
+            </div>
+
+
+
+            <!-- MENU GALLERY -->
+
+            <div class="menu-grid">
+
+
+                <!-- PAW-TATO -->
+
+                <article
+                    class="menu-category"
+                    data-category="savory"
+                >
+
+                    <img
+                        src="images/menu-pawtato.jpg"
+                        alt="Meowtake's Paw-tato menu"
+                        class="menu-image"
+                        loading="lazy"
+                    >
+
+                </article>
+
+
+
+                <!-- LOAVES & PAWSTAS -->
+
+                <article
+                    class="menu-category"
+                    data-category="savory"
+                >
+
+                    <img
+                        src="images/menu-savory.jpg"
+                        alt="Meowtake's Loaves, Bread and Pawstas menu"
+                        class="menu-image"
+                        loading="lazy"
+                    >
+
+                </article>
+
+
+
+                <!-- DESSERTS -->
+
+                <article
+                    class="menu-category"
+                    data-category="desserts"
+                >
+
+                    <img
+                        src="images/menu-desserts.jpg"
+                        alt="Meowtake's desserts menu"
+                        class="menu-image"
+                        loading="lazy"
+                    >
+
+                </article>
+
+
+
+                <!-- DRINKS -->
+
+                <article
+                    class="menu-category"
+                    data-category="drinks"
+                >
+
+                    <img
+                        src="images/menu-drinks.jpg"
+                        alt="Meowtake's drinks menu"
+                        class="menu-image"
+                        loading="lazy"
+                    >
+
+                </article>
+
+
+
+                <!-- MENU FOR KITTENS -->
+
+                <article
+                    class="menu-category"
+                    data-category="kittens"
+                >
+
+                    <img
+                        src="images/menu-kittens.jpg"
+                        alt="Meowtake's menu for kittens"
+                        class="menu-image"
+                        loading="lazy"
+                    >
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================
+             STAFF
+        ========================================= -->
+
+        <section
+            class="staff-section"
+            id="staff"
+        >
+
+
+            <div class="section-heading">
+
+                <p>
+                    THE PEOPLE BEHIND THE CHAOS
+                </p>
+
+                <h2>
+                    Meet the Staff
+                </h2>
+
+                <span>
+                    Somehow keeping Meowtake's running one coffee, one book,
+                    and one questionable decision at a time.
+                </span>
+
+            </div>
+
+
+<div class="staff-grid">
+
+    <article class="staff-card">
+
+        <img
+            src="images/izuki.jpg"
+            alt="Izuki's Meowtake's staff profile"
+            class="staff-profile"
+            loading="lazy"
+        >
+
+    </article>
+
+
+    <article class="staff-card">
+
+        <img
+            src="images/ruel.jpg"
+            alt="Ruel's Meowtake's staff profile"
+            class="staff-profile"
+            loading="lazy"
+        >
+
+    </article>
+
+
+    <article class="staff-card">
+
+        <img
+            src="images/drew.jpg"
+            alt="Drew's Meowtake's staff profile"
+            class="staff-profile"
+            loading="lazy"
+        >
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================
+             CAFÉ JOURNAL
+        ========================================= -->
+
+        <section
+            class="journal-section"
+            id="journal"
+        >
+
+
+            <div class="section-heading">
+
+                <p>
+                    FROM BEHIND THE COUNTER
+                </p>
+
+                <h2>
+                    Café Journal
+                </h2>
+
+                <span>
+                    Small updates, questionable decisions, and evidence that
+                    we probably need better supervision.
+                </span>
+
+            </div>
+
+
+
+            <div class="journal-grid">
+
+
+                <!-- JOURNAL ENTRY 1 -->
+
+                <article class="journal-card">
+
+                    <p class="journal-date">
+                        2026.09.18
+                    </p>
+
+                    <h3>
+                        The Burned Cookie Incident
+                    </h3>
+
+                    <p>
+                        Ruel attempted to bake cookies.
+                        The cookies did not survive.
+                        Neither did the kitchen's dignity. Sorry Drew.
+                    </p>
+
+                    <span class="journal-tag">
+                        incident report
+                    </span>
+
+                </article>
+
+
+
+                <!-- JOURNAL ENTRY 2 -->
+
+                <article class="journal-card">
+
+                    <p class="journal-date">
+                        2026.09.21
+                    </p>
+
+                    <h3>
+                        Meet the Pawfficial Staff
+                    </h3>
+
+                    <p>
+                        Duchess, Fluffy, Mallow and the rest of our feline
+                        management team have officially taken over the café.
+                    </p>
+
+                    <span class="journal-tag">
+                        cat update
+                    </span>
+
+                </article>
+
+
+
+                <!-- JOURNAL ENTRY 3 -->
+
+                <article class="journal-card">
+
+                    <p class="journal-date">
+                        2026.09.24
+                    </p>
+
+                    <h3>
+                        Menu Update
+                    </h3>
+
+                    <p>
+                        New desserts, new drinks, and still absolutely no
+                        permission for Ruel to enter the kitchen.
+                    </p>
+
+                    <span class="journal-tag">
+                        menu
+                    </span>
+
+                </article>
+
+
+            </div>
+<div class="journal-more">
+
+    <a
+        href="journal.html"
+        class="button secondary-button"
+    >
+        Open the Café Journal →
+    </a>
+
+</div>
+        </section>
+
+
+
+        <!-- ========================================
+             VISIT US
+        ========================================= -->
+
+        <section
+            class="visit-section"
+            id="visit"
+        >
+
+
+            <div class="section-heading">
+
+                <p>
+                    COME SAY HI
+                </p>
+
+                <h2>
+                    Visit Us
+                </h2>
+
+                <span>
+                    Coffee, books, cats, and probably at least one staff member
+                    causing problems.
+                </span>
+
+            </div>
+
+
+
+            <div class="visit-grid">
+
+
+                <!-- CAFÉ INFO -->
+
+                <div class="visit-info">
+
+                    <h3>
+                        Meowtake's Cat & Book Café
+                    </h3>
+
+                    <p class="visit-location">
+                        Tokyo, Japan
+                    </p>
+
+                    <p>
+                        A quiet little corner for slow afternoons, warm drinks,
+                        and cats who have absolutely no respect for personal space.
+                    </p>
+
+
+                    <div class="opening-hours">
+
+                        <h4>
+                            Opening Hours
+                        </h4>
+
+
+                        <div class="hours-row">
+
+                            <span>
+                                Monday – Friday
+                            </span>
+
+                            <span>
+                                10:00 – 20:00
+                            </span>
+
+                        </div>
+
+
+                        <div class="hours-row">
+
+                            <span>
+                                Saturday – Sunday
+                            </span>
+
+                            <span>
+                                09:00 – 21:00
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- HOUSE RULES -->
+
+                <div class="house-rules">
+
+                    <p class="rules-title">
+                        HOUSE RULES
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Do not wake sleeping cats.
+                        </li>
+
+                        <li>
+                            Let the cats come to you.
+                        </li>
+
+                        <li>
+                            Books are for reading, not scratching.
+                        </li>
+
+                        <li>
+                            Please keep your voice low.
+                        </li>
+
+                        <li>
+                            Do not feed the cats without asking staff.
+                        </li>
+
+                        <li>
+                            Ruel is not allowed in the kitchen.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+
+        <div class="footer-brand">
 
             <h2>
-                A coffee.<br>
-                A book.<br>
-                <span>And a meow meow.</span>
+                Meowtake's
             </h2>
 
-            <p class="hero-description">
-                A quiet corner for coffee, books, and cats who may or may not
-                judge your reading choices.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#menu" class="button primary-button">
-                    See the menu
-                </a>
-
-                <a href="#cats" class="button secondary-button">
-                    Meet the cats
-                </a>
-
-            </div>
-
-        </div>
-
-<div class="hero-image">
-    <img src="images/moodboard.jpg" alt="Meowtake's café moodboard">
-</div>
-
-</section>
-
-    <section class="cats-section" id="cats">
-
-    <div class="section-heading">
-        <p>MEET THE RESIDENTS</p>
-        <h2>Our Cats</h2>
-        <span>
-            The real owners of Meowtake's. We just work here.
-        </span>
-    </div>
-<div class="cats-grid">
-
-    <article class="cat-card">
-        <img
-            src="images/daemon.jpg"
-            alt="Daemon's Meowtake's profile"
-            class="cat-profile"
-        >
-    </article>
-
-    <article class="cat-card">
-        <img
-            src="images/tofu.jpg"
-            alt="Tofu's Meowtake's profile"
-            class="cat-profile"
-        >
-    </article>
-
-    <article class="cat-card">
-        <img
-            src="images/haru.jpg"
-            alt="Haru's Meowtake's profile"
-            class="cat-profile"
-        >
-    </article>
-
-    <article class="cat-card">
-        <img
-            src="images/duchess.jpg"
-            alt="Duchess' Meowtake's profile"
-            class="cat-profile"
-        >
-    </article>
-
-    <article class="cat-card">
-        <img
-            src="images/fluffy.jpg"
-            alt="Fluffy's Meowtake's profile"
-            class="cat-profile"
-        >
-    </article>
-
-    <article class="cat-card">
-        <img
-            src="images/mallow.jpg"
-            alt="Mallow's Meowtake's profile"
-            class="cat-profile"
-        >
-    </article>
-
-    </div>
-
-<section class="menu-section" id="menu">
-
-    <div class="section-heading">
-        <p>WHAT'S ON THE TABLE</p>
-
-        <h2>Our Menu</h2>
-
-        <span>
-            small description of the menu cus why not
-        </span>
-    </div>
-
-
-    <div class="menu-grid">
-
-        <article class="menu-category">
-
-            <h3>Paw-tato</h3>
-
-            <div class="menu-item">
-                <span>Paw-tato crisps</span>
-                <span>¥450</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Mashed paw-tato</span>
-                <span>¥600</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Paw-tato hashbrowns</span>
-                <span>¥550</span>
-            </div>
-
-        </article>
-
-
-        <article class="menu-category">
-
-            <h3>Loaves & Bread</h3>
-
-            <div class="menu-item">
-                <span>A-paw-cado toast</span>
-                <span>¥850</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Purrzza</span>
-                <span>¥950</span>
-            </div>
-
-        </article>
-
-
-        <article class="menu-category">
-
-            <h3>Pawstas</h3>
-
-            <div class="menu-item">
-                <span>Cat-bonara</span>
-                <span>¥1,100</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Na-paw-litan</span>
-                <span>¥980</span>
-            </div>
-
-        </article>
-
-
-        <article class="menu-category">
-
-            <h3>Desserts</h3>
-
-            <div class="menu-item">
-                <span>Purr-amisu</span>
-                <span>¥750</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Purr-ownies</span>
-                <span>¥600</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Meowffins</span>
-                <span>¥450</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Fluffy Catcakes</span>
-                <span>¥850</span>
-            </div>
-
-        </article>
-
-
-        <article class="menu-category">
-
-            <h3>Drinks</h3>
-
-            <div class="menu-item">
-                <span>Cat-puccino</span>
-                <span>¥650</span>
-            </div>
-
-            <div class="menu-item">
-                <span>A-meow-ricano</span>
-                <span>¥500</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Meowtcha</span>
-                <span>¥680</span>
-            </div>
-
-        </article>
-
-
-        <article class="menu-category kitten-menu">
-
-            <h3>Menu for Kittens</h3>
-
-            <p class="menu-note">
-                Served in small portions.
-            </p>
-
-            <div class="menu-item">
-                <span>Tuna belly</span>
-                <span>¥450</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Ahi tuna</span>
-                <span>¥350</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Roasted chicken</span>
-                <span>¥300</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Fried chicken</span>
-                <span>¥300</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Meat pâté</span>
-                <span>¥250</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Strawberries</span>
-                <span>¥200</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Cheese</span>
-                <span>¥200</span>
-            </div>
-
-        </article>
-
-    </div>
-
-<section class="staff-section" id="staff">
-
-    <div class="section-heading">
-        <p>THE PEOPLE BEHIND THE CHAOS</p>
-
-        <h2>Meet the Staff</h2>
-
-        <span>
-            small description of the staffffffff
-        </span>
-    </div>
-
-    <div class="staff-grid">
-
-        <article class="staff-card">
-
-            <div class="staff-number">001</div>
-
-            <h3>Izuki</h3>
-
-            <p class="staff-role">
-                Book clerk · Pianist
-            </p>
-
-            <p class="staff-description">
-            
-            </p>
-
-            <span class="staff-tag">a slacker</span>
-
-        </article>
-
-
-        <article class="staff-card">
-
-            <div class="staff-number">002</div>
-
-            <h3>Ruel</h3>
-
-            <p class="staff-role">
-                Server
-            </p>
-
-            <p class="staff-description">
-        
-            </p>
-
-            <span class="staff-tag">serves looks</span>
-
-        </article>
-
-
-        <article class="staff-card">
-
-            <div class="staff-number">003</div>
-
-            <h3>Drew</h3>
-
-            <p class="staff-role">
-                Chef
-            </p>
-
-            <p class="staff-description">
-          
-            </p>
-
-            <span class="staff-tag">5-star Michelin*</span>
-
-        </article>
-
-    </div>
-
-    <p class="staff-disclaimer">
-        *Source: Drew, probably.
-    </p>
-
-<section class="journal-section" id="journal">
-
-    <div class="section-heading">
-        <p>FROM BEHIND THE COUNTER</p>
-
-        <h2>Café Journal</h2>
-
-        <span>
-            Small updates? Incidents that happened?
-        </span>
-    </div>
-
-    <div class="journal-grid">
-
-        <article class="journal-card">
-            <p class="journal-date">2026.09.18</p>
-
-            <h3>The Burned Cookie Incident</h3>
-
             <p>
-               
+                CAT & BOOK CAFÉ
             </p>
-
-            <span class="journal-tag">incident report</span>
-        </article>
-
-
-        <article class="journal-card">
-            <p class="journal-date">2026.09.21</p>
-
-            <h3>Meet the Pawfficial Staff</h3>
-
-            <p>
-                Duchess, Fluffy, Mallow etc idk what to say some sort of funny intro
-            </p>
-
-            <span class="journal-tag">cat update</span>
-        </article>
-
-
-        <article class="journal-card">
-            <p class="journal-date">2026.09.24</p>
-
-            <h3>Menu Update</h3>
-
-            <p>
-                some sort of news ab the menu, like idk
-            </p>
-
-            <span class="journal-tag">menu</span>
-        </article>
-
-    </div>
-
-<section class="visit-section" id="visit">
-
-    <div class="section-heading">
-        <p>COME SAY HI</p>
-
-        <h2>Visit Us</h2>
-
-        <span>
-            Coffee, books, cats, 
-        </span>
-    </div>
-
-
-    <div class="visit-grid">
-
-        <div class="visit-info">
-
-            <h3>Meowtake's Cat & Book Café</h3>
-
-            <p>
-                Tokyo, Japan
-            </p>
-
-            <p>
-                small description of the cafe other than what we have now?
-            </p>
-
-
-            <div class="opening-hours">
-
-                <h4>Opening Hours</h4>
-
-                <div class="hours-row">
-                    <span>idk</span>
-                    <span>idk</span>
-                </div>
-
-                <div class="hours-row">
-                    <span>idk</span>
-                    <span>idk</span>
-                </div>
-
-            </div>
 
         </div>
 
 
-        <div class="house-rules">
+        <p class="footer-message">
+            You can leave now, but make sure to return soon or you'll be booked for feline neglect.
+        </p>
 
-            <p class="rules-title">HOUSE RULES</p>
 
-            <ul>
-                <li>Do not wake sleeping cats.</li>
-                <li>Let the cats come to you.</li>
-                <li>Books are for reading, not scratching.</li>
-                <li>Please keep your voice low.</li>
-                <li>Do not feed the cats without asking staff.</li>
-                <li>Ruel is not allowed in the kitchen.</li>
-            </ul>
-
+        <div class="footer-divider">
+            ♡
         </div>
 
-    </div>
-</section>
 
-</main>
+        <p class="footer-copy">
+            © 2026 Meowtake's Café · Tokyo
+        </p>
 
-<footer>
 
-    <div class="footer-brand">
-        <h2>Meowtake's</h2>
-        <p>Cat & Book Café</p>
-    </div>
+    </footer>
 
-    <p class="footer-message">
-        footer message here like a goodbye or smth funny
-    </p>
 
-    <p class="footer-copy">
-        © 2026 Meowtake's Café
-    </p>
 
-</footer>
+    <!-- OUR JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+
 </body>
 
 </html>
