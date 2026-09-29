@@ -893,7 +893,85 @@ footer {
 
     color: var(--soft-gray);
 }
+/* =========================================================
+   BACKGROUND DOODLE PATTERN
+========================================================= */
 
+header,
+.hero,
+.cats-section,
+.menu-section,
+.staff-section,
+.journal-section,
+.visit-section,
+.journal-page,
+.journal-hero,
+.journal-archive {
+    position: relative;
+    isolation: isolate;
+}
+
+
+/* PATTERN */
+
+header::before,
+.hero::before,
+.cats-section::before,
+.menu-section::before,
+.staff-section::before,
+.journal-section::before,
+.visit-section::before,
+.journal-page::before,
+.journal-hero::before,
+.journal-archive::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    /* THIS MAKES IT FULL SCREEN WIDTH */
+    left: calc(50% - 50vw);
+    width: 100vw;
+
+    background-image:
+        url("images/pattern-bg/pattern-bg.svg");
+
+    background-repeat: repeat;
+
+    background-size: 620px auto;
+
+    background-position: center top;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* CONTENT ABOVE THE PATTERN */
+
+header > *,
+.hero > *,
+.cats-section > *,
+.menu-section > *,
+.staff-section > *,
+.journal-section > *,
+.visit-section > *,
+.journal-page > *,
+.journal-hero > *,
+.journal-archive > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* HEADER PATTERN A LITTLE MORE SUBTLE */
+
+header::before {
+    opacity: 0.45;
+}
 
 /* =========================================================
    TABLET
@@ -1319,57 +1397,50 @@ footer {
     .footer-message {
         font-size: 14px;
     }
-}/* =====================================================
+}
+/* =========================================================
    JOURNAL PAGE
-===================================================== */
+========================================================= */
+
+.journal-page {
+    background-color: var(--cream);
+}
+
+
+/* ---------- JOURNAL HERO ---------- */
 
 .journal-hero {
-    padding: 60px 24px 45px;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 90px 8% 60px;
+
+    text-align: center;
 }
 
 .journal-hero h1 {
-    font-size: 52px;
+    margin: 0;
+
+    font-size: clamp(52px, 7vw, 90px);
+
+    line-height: 1;
+
+    color: var(--deep-burgundy);
 }
 
-.featured-journal-post {
-    grid-template-columns: 1fr;
+.journal-hero > p:last-child {
+    max-width: 650px;
 
-    gap: 30px;
+    margin: 25px auto 0;
 
-    margin: 0 24px 70px;
+    font-size: 17px;
 
-    padding: 20px;
+    line-height: 1.7;
+
+    color: #625651;
 }
 
-.featured-journal-content h2 {
-    font-size: 34px;
-}
-
-.journal-archive {
-    padding: 60px 24px;
-}
-
-.journal-archive-grid {
-    grid-template-columns: 1fr;
-
-    gap: 25px;
-}
-
-.journal-card-meta {
-    flex-direction: column;
-
-    gap: 5px;
-}
-
-.journal-filters {
-    gap: 8px;
-}
-
-.journal-filter {
-    padding: 8px 13px;
-
-    font-size: 12px;
-}
 
 /* ---------- FEATURED JOURNAL POST ---------- */
 

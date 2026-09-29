@@ -1,0 +1,106 @@
+<svg width="900" height="620" viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg">
+
+    <!-- =========================
+         PAW 1
+    ========================== -->
+
+    <g transform="translate(75 65) rotate(-12)" fill="#A68272" opacity="0.18">
+        <ellipse cx="35" cy="48" rx="27" ry="22"></ellipse>
+        <ellipse cx="10" cy="20" rx="9" ry="12"></ellipse>
+        <ellipse cx="30" cy="9" rx="9" ry="12"></ellipse>
+        <ellipse cx="51" cy="12" rx="9" ry="12"></ellipse>
+        <ellipse cx="67" cy="30" rx="9" ry="12"></ellipse>
+    </g>
+
+
+    <!-- =========================
+         OPEN BOOK
+    ========================== -->
+
+    <g transform="translate(330 65) rotate(5)" stroke="#A17453" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.15">
+        <path d="M0 10 C35 0 65 7 85 25 V100 C60 84 33 82 0 92 Z"></path>
+        <path d="M170 10 C135 0 105 7 85 25 V100 C110 84 137 82 170 92 Z"></path>
+        <path d="M85 25 V100"></path>
+        <path d="M13 29 C35 23 54 27 70 38"></path>
+        <path d="M157 29 C135 23 116 27 100 38"></path>
+    </g>
+
+
+    <!-- =========================
+         COFFEE CUP
+    ========================== -->
+
+    <g transform="translate(680 85) rotate(-6)" stroke="#491818" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.13">
+        <path d="M0 35 H85 V82 C85 105 70 120 45 120 C20 120 5 105 5 82 Z"></path>
+        <path d="M85 47 H104 C125 47 126 83 104 83 H85"></path>
+        <path d="M15 132 H103"></path>
+
+        <path d="M22 20 C13 7 28 2 20 -12"></path>
+        <path d="M45 20 C36 7 51 2 43 -12"></path>
+        <path d="M68 20 C59 7 74 2 66 -12"></path>
+    </g>
+
+
+    <!-- =========================
+         SMALL PAW
+    ========================== -->
+
+    <g transform="translate(795 280) rotate(18) scale(0.7)" fill="#A68272" opacity="0.15">
+        <ellipse cx="35" cy="48" rx="27" ry="22"></ellipse>
+        <ellipse cx="10" cy="20" rx="9" ry="12"></ellipse>
+        <ellipse cx="30" cy="9" rx="9" ry="12"></ellipse>
+        <ellipse cx="51" cy="12" rx="9" ry="12"></ellipse>
+        <ellipse cx="67" cy="30" rx="9" ry="12"></ellipse>
+    </g>
+
+
+    <!-- =========================
+         CLOSED BOOK
+    ========================== -->
+
+    <g transform="translate(105 375) rotate(-8)" stroke="#A17453" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.13">
+        <rect x="0" y="0" width="105" height="135" rx="10"></rect>
+        <path d="M18 5 V130"></path>
+        <path d="M18 115 H99"></path>
+        <path d="M28 25 H82"></path>
+    </g>
+
+
+    <!-- =========================
+         SMALL COFFEE CUP
+    ========================== -->
+
+    <g transform="translate(425 430) rotate(8) scale(0.72)" stroke="#491818" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.11">
+        <path d="M0 35 H85 V82 C85 105 70 120 45 120 C20 120 5 105 5 82 Z"></path>
+        <path d="M85 47 H104 C125 47 126 83 104 83 H85"></path>
+        <path d="M15 132 H103"></path>
+
+        <path d="M22 20 C13 7 28 2 20 -12"></path>
+        <path d="M45 20 C36 7 51 2 43 -12"></path>
+    </g>
+
+
+    <!-- =========================
+         SMALL OPEN BOOK
+    ========================== -->
+
+    <g transform="translate(650 430) rotate(-5) scale(0.68)" stroke="#A17453" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.12">
+        <path d="M0 10 C35 0 65 7 85 25 V100 C60 84 33 82 0 92 Z"></path>
+        <path d="M170 10 C135 0 105 7 85 25 V100 C110 84 137 82 170 92 Z"></path>
+        <path d="M85 25 V100"></path>
+    </g>
+
+
+    <!-- =========================
+         TINY PAW
+    ========================== -->
+
+    <g transform="translate(265 300) rotate(20) scale(0.55)" fill="#A68272" opacity="0.12">
+        <ellipse cx="35" cy="48" rx="27" ry="22"></ellipse>
+        <ellipse cx="10" cy="20" rx="9" ry="12"></ellipse>
+        <ellipse cx="30" cy="9" rx="9" ry="12"></ellipse>
+        <ellipse cx="51" cy="12" rx="9" ry="12"></ellipse>
+        <ellipse cx="67" cy="30" rx="9" ry="12"></ellipse>
+    </g>
+
+</svg>
