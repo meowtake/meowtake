@@ -4546,3 +4546,27 @@ body {
     }
 
 }
+/* =========================================================
+   OPENING HOURS — FINAL MOBILE FIX
+========================================================= */
+
+@media (max-width: 760px) {
+
+    /* more breathing room between title and sticky */
+    .visit-section .opening-hours-heading {
+        column-gap: 18px !important;
+    }
+
+    .visit-section .hours-sticky {
+        margin-left: 2px !important;
+        margin-top: 0 !important;
+    }
+
+
+    /* Garfield sentence MUST start on a new line */
+    .visit-section .monday-note .garfield-line {
+        display: block !important;
+
+        margin-top: 3px;
+    }
+}
