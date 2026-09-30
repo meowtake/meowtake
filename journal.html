@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -13,7 +11,7 @@
 
     <meta
         name="description"
-        content="Updates, incidents and questionable decisions from Meowtake's Cat & Book Café."
+        content="The Meowtake's Cat & Book Café Journal — café news, behind-the-counter chaos, visitor stories and pawsonnel updates."
     >
 
     <title>Café Journal | Meowtake's</title>
@@ -33,175 +31,209 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
 
 
-    <!-- CSS -->
+    <!-- MAIN CSS -->
 
     <link
         rel="stylesheet"
         href="style.css"
     >
-
 </head>
 
+<body class="journal-body"></body>
 
-<body>
 
-
-    <!-- HEADER -->
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
     <header>
 
-        <a
-            href="index.html"
-            class="logo"
-        >
+        <a href="index.html" class="logo">
 
-            <h1>Meowtake's</h1>
+            <strong>
+                Meowtake's
+            </strong>
 
-            <p>Cat & Book Café</p>
+            <span>
+                CAT &amp; BOOK CAFÉ
+            </span>
 
         </a>
 
 
         <button
             class="menu-toggle"
-            type="button"
-            aria-label="Open navigation"
+            aria-label="Open navigation menu"
+            aria-controls="main-navigation"
+            aria-expanded="false"
         >
             ☰
         </button>
 
 
-        <nav class="main-nav">
+       <nav class="main-nav" id="main-navigation">
 
-            <a href="index.html">
-                Home
-            </a>
+    <a href="index.html">Home</a>
 
-            <a href="index.html#cats">
-                Our Cats
-            </a>
+    <a href="index.html#cats">
+        Our Cats
+    </a>
 
-            <a href="index.html#menu">
-                Menu
-            </a>
+    <a href="index.html#menu">
+        Menu
+    </a>
 
-            <a href="index.html#staff">
-                Staff
-            </a>
+    <a href="index.html#staff">
+        Staff
+    </a>
 
-            <a href="journal.html">
-                Journal
-            </a>
+    <a href="journal.html">
+        Journal
+    </a>
 
-            <a href="index.html#visit">
-                Visit Us
-            </a>
+    <a href="contact.html">
+        Contact Us
+    </a>
 
-        </nav>
+    <a href="index.html#visit">
+        Visit Us
+    </a>
+
+</nav>
 
     </header>
 
 
 
+    <!-- =====================================================
+         JOURNAL
+    ====================================================== -->
+
     <main class="journal-page">
 
 
-        <!-- JOURNAL INTRO -->
+        <!-- =================================================
+             JOURNAL INTRO
+        ================================================== -->
 
-        <section class="journal-hero">
+      <section class="journal-hero">
 
-            <p class="eyebrow">
-                FROM BEHIND THE COUNTER
-            </p>
+    <h1>Café Journal</h1>
 
-            <h1>
-                Café Journal
-            </h1>
+    <p class="journal-intro">
+        The latest café news, behind-the-counter incidents,
+        visitor stories, and pawsonnel updates.
+    </p>
 
-            <p>
-                Café updates, feline management decisions, staff incidents,
-                and other things that probably should have stayed behind the counter.
-            </p>
+</section>
+
+
+
+        <!-- =================================================
+             FEATURED / LATEST POST
+        ================================================== -->
+
+        <section class="featured-journal-wrapper">
+
+            <article class="featured-journal-post">
+
+
+                <!-- IMAGE -->
+
+                <div class="featured-journal-image">
+
+                    <img
+                        src="images/burned-cookies-blog.jpg"
+                        alt="Burned cookies incident"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <!-- CONTENT -->
+
+                <div class="featured-journal-content">
+
+                    <span class="journal-latest">
+                        LATEST INCIDENT
+                    </span>
+
+
+                    <p class="journal-date">
+                        2026.09.18
+                    </p>
+
+
+                    <p class="featured-category">
+                        BEHIND THE COUNTER
+                    </p>
+
+
+                    <h2>
+                        The Burned Cookie Incident
+                    </h2>
+
+
+                    <p>
+                        Ruel entered the kitchen with confidence.
+                        The cookies left with considerably less.
+                    </p>
+
+
+                    <!--
+                        IMPORTANT:
+                        Replace PASTE_FULL_FACEBOOK_POST_LINK_HERE
+                        with the full Facebook URL you already have.
+                    -->
+
+                    <a
+                        href="https://www.facebook.com/allhailruel/posts/pfbid02fcDRZki2CAUBgQv6k3BU8iCHLRXo41DNj1A2xsa6iYyAbz7h4jVaWJt88fqhYqZol"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="featured-post-link"
+                    >
+                        Read Ruel's original post
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+            </article>
 
         </section>
 
 
 
-        <!-- FEATURED / LATEST -->
-
-        <section class="featured-journal-post">
-
-<div class="featured-journal-image">
-
-  <img
-    src="images/burned-cookies-blog.jpg"
-    alt="Screenshot of Ruel's burned cookie blog post"
->
-
-</div>
-
-            <div class="featured-journal-content">
-
-                <span class="journal-latest">
-                    LATEST INCIDENT
-                </span>
-
-                <p class="journal-date">
-                    2026.09.18
-                </p>
-
-                <h2>
-                    The Burned Cookie Incident
-                </h2>
-
-                <p>
-                    Ruel entered the kitchen with confidence.
-                    The cookies left with considerably less.
-                </p>
-
-            <a
-    href="https://www.facebook.com/allhailruel/posts/pfbid0bkmiP5nCLn6GB8MNsiTc69KMkT6dEeUTMEM1hS9bTfCdwnY5oUT6TrnjWRXP2UPyl"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="button primary-button"
->
-    Read Ruel's original post ↗
-</a>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- JOURNAL ARCHIVE -->
+        <!-- =================================================
+             JOURNAL ARCHIVE
+        ================================================== -->
 
         <section class="journal-archive">
 
 
-            <div class="section-heading">
+            <!-- HEADING -->
 
-                <p>
-                    THE ARCHIVES
-                </p>
+            <div class="journal-archive-heading">
 
-                <h2>
-                    What's been happening?
-                </h2>
-
-                <span>
-                    Everything we probably should have kept off the record.
-                </span>
+                <p class="archive-kicker">THE NEWEST</p>
+<h2>Latest around Meowtake’s</h2>
+<p class="archive-subtext">
+  Café announcements, staff chaos, stories from visitors, and updates from the actual owners of the place.
+</p>
 
             </div>
 
 
-            <!-- FILTERS -->
+
+            <!-- =================================================
+                 FILTERS
+            ================================================== -->
 
             <div class="journal-filters">
 
@@ -212,64 +244,76 @@
                     All
                 </button>
 
-                <button
-                    class="journal-filter"
-                    data-journal-filter="incidents"
-                >
-                    Incidents
-                </button>
-
-                <button
-                    class="journal-filter"
-                    data-journal-filter="cats"
-                >
-                    Cats
-                </button>
-
-                <button
-                    class="journal-filter"
-                    data-journal-filter="menu"
-                >
-                    Menu
-                </button>
 
                 <button
                     class="journal-filter"
                     data-journal-filter="news"
                 >
-                    Café News
+                    News
+                </button>
+
+
+                <button
+                    class="journal-filter"
+                    data-journal-filter="behind"
+                >
+                    Behind the Counter
+                </button>
+
+
+                <button
+                    class="journal-filter"
+                    data-journal-filter="stories"
+                >
+                    Your Stories
+                </button>
+
+
+                <button
+                    class="journal-filter"
+                    data-journal-filter="pawsonnel"
+                >
+                    Pawsonnel Updates
                 </button>
 
             </div>
 
 
 
+            <!-- =================================================
+                 POSTS
+            ================================================== -->
+
             <div class="journal-archive-grid">
 
 
-                <!-- BURNED COOKIES -->
+                <!-- =============================================
+                     BURNED COOKIE INCIDENT
+                ============================================== -->
 
                 <article
                     class="journal-post-card"
-                    data-journal-category="incidents"
+                    data-journal-category="behind"
+                    data-date="2026-09-18"
                 >
 
                     <div class="journal-card-image">
 
                         <img
-                            src="images/burned-cookies-blog.webp"
+                            src="images/burned-cookies-blog.jpg"
                             alt="Burned cookies incident"
                             loading="lazy"
                         >
 
                     </div>
 
+
                     <div class="journal-card-content">
 
                         <div class="journal-card-meta">
 
                             <span>
-                                INCIDENT REPORT
+                                BEHIND THE COUNTER
                             </span>
 
                             <span>
@@ -278,17 +322,25 @@
 
                         </div>
 
+
                         <h3>
                             The Burned Cookie Incident
                         </h3>
 
+
                         <p>
-                            An unsupervised baking attempt, several unfortunate
-                            cookies, and one permanent kitchen ban.
+                            An unsupervised baking attempt,
+                            several unfortunate cookies,
+                            and one permanent kitchen ban.
                         </p>
 
-                        <a href="burned-cookies.html">
-                            Read more →
+
+                        <a
+                            href="https://www.facebook.com/allhailruel/posts/pfbid02fcDRZki2CAUBgQv6k3BU8iCHLRXo41DNj1A2xsa6iYyAbz7h4jVaWJt88fqhYqZol"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read the original post ↗
                         </a>
 
                     </div>
@@ -297,11 +349,14 @@
 
 
 
-                <!-- CAT INTRODUCTIONS -->
+                <!-- =============================================
+                     PAWFFICIAL STAFF
+                ============================================== -->
 
                 <article
                     class="journal-post-card"
-                    data-journal-category="cats"
+                    data-journal-category="pawsonnel"
+                    data-date="2026-09-21"
                 >
 
                     <div class="journal-card-content">
@@ -309,7 +364,7 @@
                         <div class="journal-card-meta">
 
                             <span>
-                                CAT UPDATE
+                                PAWSONNEL UPDATE
                             </span>
 
                             <span>
@@ -318,17 +373,21 @@
 
                         </div>
 
+
                         <h3>
                             Meet the Pawfficial Staff
                         </h3>
 
+
                         <p>
-                            The actual management team finally agreed to
-                            introduce themselves.
+                            Duchess, Fluffy, Mallow and the rest
+                            of the actual management team finally
+                            agreed to introduce themselves.
                         </p>
 
-                        <a href="#">
-                            Coming soon
+
+                        <a href="index.html#cats">
+                            Meet the residents →
                         </a>
 
                     </div>
@@ -337,11 +396,14 @@
 
 
 
-                <!-- MENU UPDATE -->
+                <!-- =============================================
+                     MENU UPDATE
+                ============================================== -->
 
                 <article
                     class="journal-post-card"
-                    data-journal-category="menu"
+                    data-journal-category="news"
+                    data-date="2026-09-24"
                 >
 
                     <div class="journal-card-content">
@@ -349,7 +411,7 @@
                         <div class="journal-card-meta">
 
                             <span>
-                                MENU UPDATE
+                                NEWS
                             </span>
 
                             <span>
@@ -358,14 +420,17 @@
 
                         </div>
 
+
                         <h3>
                             New Things on the Table
                         </h3>
 
+
                         <p>
-                            Desserts, coffee, paw-stas and a dedicated menu
-                            for our feline customers.
+                            Desserts, coffee, paw-stas and
+                            a dedicated menu for our feline customers.
                         </p>
+
 
                         <a href="index.html#menu">
                             See the menu →
@@ -377,11 +442,14 @@
 
 
 
-                <!-- OPENING -->
+                <!-- =============================================
+                     OPENING NEWS
+                ============================================== -->
 
                 <article
                     class="journal-post-card"
                     data-journal-category="news"
+                    data-date="2026-09-20"
                 >
 
                     <div class="journal-card-content">
@@ -389,43 +457,116 @@
                         <div class="journal-card-meta">
 
                             <span>
-                                CAFÉ NEWS
+                                NEWS
                             </span>
 
                             <span>
-                                2026
+                                2026.09.20
                             </span>
 
                         </div>
+
 
                         <h3>
                             Meowtake's Opens Its Doors
                         </h3>
 
+
                         <p>
-                            Coffee. Books. Cats. Somehow this seemed
-                            like a reasonable business plan.
+                            Coffee. Books. Cats.
+                            Somehow this seemed like a reasonable
+                            business plan.
                         </p>
 
-                        <a href="#">
+
+                        <span class="journal-coming-soon">
                             Coming soon
-                        </a>
+                        </span>
 
                     </div>
 
                 </article>
 
 
+
+                <!-- =============================================
+                     EXAMPLE YOUR STORIES CARD
+
+                     Keep this hidden until you actually have
+                     a visitor story you want to publish.
+                ============================================== -->
+
+                <!--
+
+                <article
+                    class="journal-post-card"
+                    data-journal-category="stories"
+                    data-date="2026-09-30"
+                >
+
+                    <div class="journal-card-image">
+
+                        <img
+                            src="images/YOUR-STORY-IMAGE.webp"
+                            alt="Visitor story at Meowtake's"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="journal-card-content">
+
+                        <div class="journal-card-meta">
+
+                            <span>
+                                YOUR STORIES
+                            </span>
+
+                            <span>
+                                2026.09.30
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Your Post Title
+                        </h3>
+
+
+                        <p>
+                            A short preview of the visitor's
+                            story, review or Meowtake's moment.
+                        </p>
+
+
+                        <a
+                            href="ORIGINAL-POST-LINK"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read their story ↗
+                        </a>
+
+                    </div>
+
+                </article>
+
+                -->
+
+
             </div>
 
         </section>
-
 
     </main>
 
 
 
-    <!-- FOOTER -->
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
     <footer>
 
@@ -436,15 +577,17 @@
             </h2>
 
             <p>
-                CAT & BOOK CAFÉ
+                CAT &amp; BOOK CAFÉ
             </p>
 
         </div>
 
 
         <p class="footer-message">
-            Coffee served. Books opened. Cats supervised.<br>
-            Ruel's cooking is not.
+            You can leave now, but make sure to return soon
+            or you'll be booked for
+            <br>
+            feline neglect.
         </p>
 
 
@@ -452,16 +595,11 @@
             ♡
         </div>
 
-
-        <p class="footer-copy">
-            © 2026 Meowtake's Café · Tokyo
-        </p>
-
     </footer>
 
 
-    <script src="script.js"></script>
 
+    <script src="script.js"></script>
 
 </body>
 
