@@ -4524,3 +4524,14 @@ body {
         padding: 9px 0;
     }
 }
+@media (max-width: 760px) {
+
+    .hours-sticky-joke strong,
+    .garfield-line {
+        display: block;
+    }
+
+    .garfield-line {
+        margin-top: 2px;
+    }
+}
