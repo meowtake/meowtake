@@ -4206,3 +4206,166 @@ body {
         line-height: 1.25;
     }
 }
+/* =========================================================
+   OPENING HOURS — STICKY NOTE FINAL
+========================================================= */
+
+.opening-hours-heading {
+    display: grid;
+
+    grid-template-columns:
+        max-content
+        minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 16px;
+
+    margin-bottom: 16px;
+}
+
+.opening-hours-heading h4 {
+    margin: 0;
+
+    white-space: nowrap;
+}
+
+.hours-asterisk {
+    margin-left: 3px;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 19px;
+
+    color: var(--deep-burgundy);
+}
+
+
+/* STICKY */
+
+.hours-sticky {
+    width: min(210px, 100%);
+
+    margin-top: -4px;
+
+    padding: 9px 11px;
+
+    background: #e8cf9d;
+
+    border: 1px solid rgba(73, 24, 24, 0.35);
+
+    box-shadow:
+        3px 4px 0 rgba(73, 24, 24, 0.10);
+
+    transform: rotate(1.2deg);
+
+    font-family: "Caveat", cursive;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    color: var(--deep-burgundy);
+}
+
+.hours-sticky span {
+    display: block;
+}
+
+
+/* GARFIELD PART */
+
+.hours-sticky-joke {
+    margin-top: 8px;
+
+    padding-top: 7px;
+
+    border-top:
+        1px dashed
+        rgba(73, 24, 24, 0.28);
+
+    font-size: 11px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   FORCE HOURS TO STAY ON ONE LINE
+========================================================= */
+
+.visit-section
+.opening-hours
+.hours-row {
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto !important;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-direction: unset !important;
+}
+
+.visit-section
+.opening-hours
+.hours-row span:last-child {
+    text-align: right;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .opening-hours-heading {
+        grid-template-columns:
+            max-content
+            minmax(0, 1fr);
+
+        gap: 10px;
+    }
+
+    .hours-sticky {
+        width: 100%;
+        max-width: 175px;
+
+        margin-top: -3px;
+
+        padding: 8px 9px;
+
+        font-size: 11px;
+    }
+
+    .hours-sticky-joke {
+        margin-top: 6px;
+
+        padding-top: 6px;
+
+        font-size: 10.5px;
+    }
+
+    .visit-section
+    .opening-hours
+    .hours-row {
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            auto !important;
+
+        gap: 10px;
+
+        flex-direction: unset !important;
+
+        padding: 9px 0;
+    }
+}
