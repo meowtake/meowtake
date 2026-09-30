@@ -4369,3 +4369,158 @@ body {
         padding: 9px 0;
     }
 }
+/* =========================================================
+   OPENING HOURS + STICKY
+========================================================= */
+
+.opening-hours-heading {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: start;
+
+    gap: 16px;
+
+    margin-bottom: 16px;
+}
+
+.opening-hours-heading h4 {
+    margin: 0;
+
+    white-space: nowrap;
+}
+
+.hours-asterisk {
+    margin-left: 3px;
+
+    font-family: "Caveat", cursive;
+    font-size: 18px;
+
+    color: var(--deep-burgundy);
+}
+
+
+/* DESKTOP — STICKY TO THE RIGHT */
+
+.hours-sticky {
+    width: 200px;
+
+    justify-self: end;
+
+    margin-top: -5px;
+
+    padding: 8px 10px;
+
+    background: #e8cf9d;
+
+    border: 1px solid rgba(73, 24, 24, 0.35);
+
+    box-shadow:
+        3px 4px 0 rgba(73, 24, 24, 0.10);
+
+    transform: rotate(1.2deg);
+
+    font-family: "Caveat", cursive;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    color: var(--deep-burgundy);
+}
+
+.hours-sticky span {
+    display: block;
+}
+
+.hours-sticky-joke {
+    margin-top: 7px;
+    padding-top: 6px;
+
+    border-top: 1px dashed rgba(73, 24, 24, 0.25);
+
+    font-size: 10px;
+
+    opacity: 0.78;
+}
+
+
+/* HOURS */
+
+.opening-hours .hours-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 8px 0;
+
+    flex-direction: unset !important;
+}
+
+.opening-hours .hours-row span:last-child {
+    white-space: nowrap;
+    text-align: right;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .opening-hours-heading {
+        grid-template-columns:
+            max-content
+            minmax(0, 1fr);
+
+        align-items: start;
+
+        gap: 7px;
+
+        margin-bottom: 16px;
+    }
+
+    .opening-hours-heading h4 {
+        font-size: 16px;
+    }
+
+
+    /* now it sits DIRECTLY beside Opening Hours */
+
+    .hours-sticky {
+        width: 145px;
+        max-width: 100%;
+
+        justify-self: start;
+
+        margin: -4px 0 0;
+
+        padding: 7px 8px;
+
+        font-size: 9.5px;
+        line-height: 1.15;
+
+        transform: rotate(1deg);
+    }
+
+    .hours-sticky-joke {
+        margin-top: 5px;
+        padding-top: 5px;
+
+        font-size: 9px;
+        line-height: 1.15;
+    }
+
+
+    .opening-hours .hours-row {
+        grid-template-columns:
+            minmax(0, 1fr)
+            auto !important;
+
+        gap: 8px;
+
+        padding: 9px 0;
+    }
+}
