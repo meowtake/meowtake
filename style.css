@@ -2131,6 +2131,59 @@ h4 {
 .opening-hours {
     margin-top: 24px;
 }
+.opening-hours-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+
+    margin-bottom: 12px;
+}
+
+.opening-hours-heading h4 {
+    margin: 0;
+}
+
+.hours-asterisk {
+    margin-left: 3px;
+
+    font-family: "Caveat", cursive;
+    font-size: 20px;
+
+    color: var(--deep-burgundy);
+}
+
+.hours-sticky {
+    max-width: 190px;
+
+    padding: 9px 11px;
+
+    background: #e8cf9d;
+
+    border: 1px solid rgba(73, 24, 24, 0.35);
+
+    box-shadow:
+        3px 4px 0 rgba(73, 24, 24, 0.10);
+
+    transform: rotate(1.5deg);
+
+    font-family: "Caveat", cursive;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.15;
+
+    color: var(--deep-burgundy);
+}
+
+.monday-note {
+    margin: 10px 0 0;
+
+    font-family: "Caveat", cursive;
+    font-size: 13px;
+    font-weight: 600;
+
+    color: var(--warm-brown);
+}
 
 .opening-hours h4 {
     margin: 0 0 10px;
@@ -2149,6 +2202,21 @@ h4 {
     border-bottom: 1px dotted rgba(25, 25, 24, 0.35);
 
     font-size: 13px;
+}
+.hours-closed {
+    color: var(--deep-burgundy);
+    font-weight: 800;
+}
+
+.hours-note {
+    margin: 14px 0 0;
+
+    font-family: "Caveat", cursive;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.25;
+
+    color: var(--warm-brown);
 }
 
 
@@ -3997,6 +4065,22 @@ h4 {
     .journal-card-meta {
         align-items: flex-start;
     }
+}
+@media (max-width: 760px) {
+
+    .opening-hours-heading {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hours-sticky {
+        align-self: flex-end;
+
+        max-width: 180px;
+
+        font-size: 12px;
+    }
+
 }
 
 
