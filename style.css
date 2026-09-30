@@ -4049,11 +4049,6 @@ h4 {
         line-height: 1.2;
     }
 
-    .hours-row {
-        flex-direction: column;
-        gap: 2px;
-    }
-
     .contact-heading h1 {
         font-size: 39px;
     }
@@ -4097,5 +4092,117 @@ h4 {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+}
+/* =========================================================
+   OPENING HOURS — MOBILE FIX
+========================================================= */
+
+:root {
+    color-scheme: only light;
+}
+
+html,
+body {
+    color-scheme: only light;
+}
+
+
+@media (max-width: 760px) {
+
+    .opening-hours {
+        margin-top: 26px;
+    }
+
+
+    /* TITLE + ASTERISK */
+
+    .opening-hours-heading {
+        display: block;
+
+        margin-bottom: 16px;
+    }
+
+    .opening-hours-heading h4 {
+        margin: 0;
+
+        display: inline-flex;
+        align-items: flex-start;
+
+        font-size: 16px;
+    }
+
+    .hours-asterisk {
+        margin-left: 4px;
+
+        font-size: 18px;
+        line-height: 0.8;
+    }
+
+
+    /* SMALL STICKY NOTE */
+
+    .hours-sticky {
+        width: 155px;
+        max-width: 65%;
+
+        margin:
+            10px
+            5px
+            17px
+            auto;
+
+        padding: 8px 9px;
+
+        align-self: auto;
+
+        font-size: 11px;
+        line-height: 1.2;
+
+        transform: rotate(1.5deg);
+
+        box-shadow:
+            3px 4px 0 rgba(73, 24, 24, 0.10);
+    }
+
+
+    /* KEEP DAYS + HOURS ON SAME LINE */
+
+    .hours-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 15px;
+
+        padding: 9px 0;
+
+        font-size: 12.5px;
+    }
+
+    .hours-row span:last-child {
+        flex-shrink: 0;
+
+        text-align: right;
+    }
+
+
+    /* MONDAY */
+
+    .hours-closed {
+        font-weight: 800;
+
+        color: var(--deep-burgundy);
+    }
+
+
+    /* LITTLE STAFF NOTE */
+
+    .monday-note {
+        margin: 13px 0 0;
+
+        font-size: 12.5px;
+        line-height: 1.25;
     }
 }
