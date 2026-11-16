@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+
+  <!-- cat ears -->
+  <path d="M13 23 L10 7 L25 17
+       C27 16 29 16 32 16
+       C35 16 37 16 39 17
+       L54 7 L51 23
+       C56 28 58 34 58 40
+       C58 52 47 59 32 59
+       C17 59 6 52 6 40
+       C6 34 8 28 13 23Z" fill="#E88C9A"></path>
+
+  <!-- inner ears -->
+  <path d="M14 12 L16 21 L22 18Z" fill="#F3E8D4"></path>
+  <path d="M50 12 L48 21 L42 18Z" fill="#F3E8D4"></path>
+
+  <!-- eyes -->
+  <circle cx="23" cy="36" r="2.5" fill="#491818"></circle>
+  <circle cx="41" cy="36" r="2.5" fill="#491818"></circle>
+
+  <!-- nose -->
+  <path d="M29 42 Q32 39 35 42 Q32 46 29 42Z" fill="#491818"></path>
+
+  <!-- mouth -->
+  <path d="M32 45 Q28 49 25 46
+       M32 45 Q36 49 39 46" fill="none" stroke="#491818" stroke-width="2" stroke-linecap="round"></path>
+
+</svg>
