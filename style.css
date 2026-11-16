@@ -4570,3 +4570,1879 @@ body {
         margin-top: 3px;
     }
 }
+/* =========================================================
+   BOOK CORNER
+========================================================= */
+
+.books-section {
+    position: relative;
+
+    padding: var(--section-y) var(--section-x);
+
+    background: var(--cream);
+}
+
+.books-section::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        url("images/pattern-bg/pattern-bg.svg");
+
+    background-repeat: repeat;
+    background-size: 520px auto;
+
+    opacity: 0.10;
+
+    pointer-events: none;
+}
+
+.books-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.books-layout {
+    width: min(100%, 1120px);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 0.85fr)
+        minmax(0, 1.3fr);
+
+    align-items: start;
+
+    gap: 34px;
+}
+
+
+/* MAIN IMAGE */
+
+.books-feature {
+    position: relative;
+
+    padding: 10px 10px 42px;
+
+    background: var(--light-cream);
+
+    border:
+        1.5px
+        solid
+        var(--almost-black);
+
+    border-radius: 5px;
+
+    box-shadow:
+        7px
+        8px
+        0
+        rgba(166, 130, 114, 0.45);
+
+    transform:
+        rotate(-0.4deg);
+}
+
+.books-feature::before {
+    content: "";
+
+    position: absolute;
+
+    top: -10px;
+    left: 50%;
+
+    width: 75px;
+    height: 20px;
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    background:
+        rgba(229, 202, 164, 0.82);
+}
+
+.books-feature img {
+    width: 100%;
+
+    border:
+        1px
+        solid
+        rgba(25, 25, 24, 0.55);
+}
+
+.books-feature-note {
+    position: absolute;
+
+    right: 14px;
+    bottom: 12px;
+
+    font-family:
+        "Caveat",
+        cursive;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color:
+        rgba(73, 24, 24, 0.72);
+}
+
+
+/* CATEGORY CARDS */
+
+.book-categories {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.book-category-card {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 19px 18px 18px;
+
+    background:
+        var(--light-cream);
+
+    border:
+        1.5px
+        solid
+        var(--almost-black);
+
+    border-radius: 5px;
+
+    box-shadow:
+        4px
+        4px
+        0
+        rgba(166, 130, 114, 0.30);
+}
+
+.book-category-card:nth-child(even) {
+    transform:
+        rotate(0.25deg);
+}
+
+.book-category-card:nth-child(odd) {
+    transform:
+        rotate(-0.2deg);
+}
+
+.book-number {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color:
+        var(--warm-brown);
+}
+
+.book-category-card h3 {
+    margin: 0 0 7px;
+
+    font-size: 19px;
+
+    color:
+        var(--deep-burgundy);
+}
+
+.book-category-card p {
+    margin: 0;
+
+    font-size: 12.5px;
+    line-height: 1.55;
+
+    color:
+        rgba(25, 25, 24, 0.76);
+}
+
+
+/* LITTLE NOTE */
+
+.books-bottom-note {
+    width: fit-content;
+
+    max-width: 90%;
+
+    margin:
+        28px
+        auto
+        0;
+
+    font-family:
+        "Caveat",
+        cursive;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    text-align: center;
+
+    color:
+        rgba(73, 24, 24, 0.65);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+    .books-layout {
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+
+        gap: 30px;
+    }
+
+    .books-feature {
+        width: min(100%, 420px);
+
+        margin: 0 auto;
+
+        transform: none;
+    }
+
+    .book-categories {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 11px;
+    }
+
+    .book-category-card {
+        padding: 16px 14px;
+
+        transform: none !important;
+    }
+
+    .book-category-card h3 {
+        font-size: 16px;
+    }
+
+    .book-category-card p {
+        font-size: 11.5px;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .book-categories {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================================================
+   BOOK CORNER — BOOKMARK STYLE
+   pune la finalul style.css
+========================================================= */
+
+.books-layout {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.books-bookmark-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+    gap: 1.25rem;
+    align-items: stretch;
+}
+
+.book-genre-bookmark {
+    position: relative;
+    background: #f8f4ee;
+    border: 2px solid #4b2a24;
+    border-radius: 14px 14px 0 0;
+    box-shadow: 6px 6px 0 #c8a394;
+    padding: 1rem 1rem 2.8rem;
+    min-height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: visible;
+}
+
+.book-genre-bookmark:hover {
+    transform: translateY(-4px);
+    box-shadow: 8px 8px 0 #c8a394;
+}
+
+/* partea de jos ca un bookmark real */
+.book-genre-bookmark::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    transform: translateX(-50%);
+    width: 44px;
+    height: 24px;
+    background: #f8f4ee;
+    border-left: 2px solid #4b2a24;
+    border-right: 2px solid #4b2a24;
+    border-bottom: 2px solid #4b2a24;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* gaura mica sus */
+.book-genre-bookmark::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #8b5b4d;
+    border-radius: 50%;
+    background: #efe5d4;
+}
+
+.bookmark-no {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #9d765d;
+    margin-bottom: 0.85rem;
+}
+
+.book-genre-bookmark h3 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.08;
+    color: #5a1717;
+    margin: 0 0 0.9rem;
+}
+
+.book-genre-bookmark p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #5b4a45;
+}
+
+/* ca sa para mai “bookmark-y”, alternam putin */
+.book-genre-bookmark:nth-child(2),
+.book-genre-bookmark:nth-child(5) {
+    transform: translateY(18px);
+}
+
+.book-genre-bookmark:nth-child(3),
+.book-genre-bookmark:nth-child(6) {
+    transform: translateY(8px);
+}
+
+.book-genre-bookmark:nth-child(2):hover,
+.book-genre-bookmark:nth-child(5):hover,
+.book-genre-bookmark:nth-child(3):hover,
+.book-genre-bookmark:nth-child(6):hover {
+    transform: translateY(12px);
+}
+
+/* daca ai imaginea/polaroidul din stanga */
+.books-visual-card {
+    position: sticky;
+    top: 110px;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1100px) {
+    .books-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .books-visual-card {
+        position: static;
+    }
+
+    .books-bookmark-grid {
+        grid-template-columns: repeat(2, minmax(160px, 1fr));
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 700px) {
+    .books-bookmark-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .book-genre-bookmark {
+        min-height: 220px;
+        padding: 0.9rem 0.9rem 2.4rem;
+        box-shadow: 4px 4px 0 #c8a394;
+    }
+
+    .book-genre-bookmark h3 {
+        font-size: 1.2rem;
+    }
+
+    .book-genre-bookmark p {
+        font-size: 0.92rem;
+        line-height: 1.5;
+    }
+
+    .book-genre-bookmark:nth-child(2),
+    .book-genre-bookmark:nth-child(5),
+    .book-genre-bookmark:nth-child(3),
+    .book-genre-bookmark:nth-child(6) {
+        transform: none;
+    }
+
+    .book-genre-bookmark:nth-child(2):hover,
+    .book-genre-bookmark:nth-child(5):hover,
+    .book-genre-bookmark:nth-child(3):hover,
+    .book-genre-bookmark:nth-child(6):hover {
+        transform: translateY(-3px);
+    }
+}
+
+@media (max-width: 520px) {
+    .books-bookmark-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .book-genre-bookmark {
+        min-height: auto;
+    }
+}
+/* =========================================================
+   BOOK CORNER — LIBRARY CARD
+========================================================= */
+
+.book-corner-card {
+    position: relative;
+
+    min-height: 430px;
+
+    padding: 34px 32px 100px;
+
+    background: var(--light-cream);
+
+    border: 1.5px solid var(--almost-black);
+
+    border-radius: 6px;
+
+    box-shadow:
+        7px 8px 0
+        rgba(166, 130, 114, 0.42);
+
+    overflow: hidden;
+}
+
+.book-corner-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: -10px;
+    left: 50%;
+
+    width: 78px;
+    height: 22px;
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    background:
+        rgba(229, 202, 164, 0.82);
+}
+
+.book-corner-kicker {
+    margin: 0 0 12px;
+
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--warm-brown);
+}
+
+.book-corner-card h3 {
+    margin: 0 0 18px;
+
+    font-size: 38px;
+    line-height: 1;
+
+    color: var(--deep-burgundy);
+}
+
+.book-corner-text {
+    max-width: 390px;
+
+    margin: 0;
+
+    font-size: 13.5px;
+    line-height: 1.7;
+
+    color:
+        rgba(25, 25, 24, 0.76);
+}
+
+
+/* MINI RULES */
+
+.book-corner-rules {
+    margin-top: 28px;
+
+    display: grid;
+
+    gap: 9px;
+}
+
+.book-corner-rules > div {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding-bottom: 8px;
+
+    border-bottom:
+        1px dotted
+        rgba(73, 24, 24, 0.28);
+}
+
+.book-corner-rules span {
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 9px;
+
+    color: var(--warm-brown);
+}
+
+.book-corner-rules p {
+    margin: 0;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 13px;
+
+    color: var(--deep-burgundy);
+}
+
+
+/* LITTLE BOOKS */
+
+.mini-bookshelf {
+    position: absolute;
+
+    left: 30px;
+    right: 30px;
+    bottom: 53px;
+
+    height: 55px;
+
+    display: flex;
+    align-items: flex-end;
+
+    gap: 7px;
+
+    padding-left: 18px;
+
+    border-bottom:
+        7px solid
+        var(--deep-burgundy);
+}
+
+.mini-book {
+    display: block;
+
+    width: 22px;
+
+    border:
+        1.5px solid
+        var(--almost-black);
+
+    border-radius:
+        2px 2px 0 0;
+}
+
+.book-a {
+    height: 40px;
+    background: var(--dusty-rose);
+}
+
+.book-b {
+    height: 52px;
+    background: var(--deep-burgundy);
+}
+
+.book-c {
+    height: 35px;
+    background: #d9be72;
+}
+
+.book-d {
+    height: 46px;
+    background: #879486;
+}
+
+.book-e {
+    height: 31px;
+    background: var(--cream);
+}
+
+
+/* HANDWRITTEN NOTE */
+
+.book-corner-note {
+    position: absolute;
+
+    right: 22px;
+    bottom: 15px;
+
+    margin: 0;
+
+    font-family:
+        "Caveat",
+        cursive;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color:
+        rgba(73, 24, 24, 0.68);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+    .book-corner-card {
+        min-height: 390px;
+
+        padding:
+            28px
+            24px
+            95px;
+    }
+
+    .book-corner-card h3 {
+        font-size: 32px;
+    }
+
+    .book-corner-text {
+        font-size: 13px;
+    }
+
+}
+/* =========================================================
+   BOOK CORNER — CLEAN BOOKSHELF
+========================================================= */
+
+.books-section {
+    position: relative;
+
+    padding: 62px var(--section-x) 70px;
+
+    background: var(--cream);
+}
+
+.books-section::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        url("images/pattern-bg/pattern-bg.svg");
+
+    background-repeat: repeat;
+    background-size: 520px auto;
+
+    opacity: 0.09;
+
+    pointer-events: none;
+}
+
+.books-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* SHELF AREA */
+
+.book-shelf {
+    width: min(100%, 930px);
+
+    margin: 38px auto 0;
+}
+
+
+/* BOOKS */
+
+.book-spines {
+    min-height: 320px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 22px;
+}
+
+
+.book-spine {
+    position: relative;
+
+    width: 115px;
+
+    flex: 0 1 115px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 18px 12px;
+
+    border: 1.5px solid var(--almost-black);
+
+    border-radius:
+        5px 5px 2px 2px;
+
+    box-shadow:
+        4px 0 0
+        rgba(73, 24, 24, 0.12);
+
+    overflow: hidden;
+}
+
+
+/* subtle book bands */
+
+.book-spine::before,
+.book-spine::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    height: 5px;
+
+    border-top:
+        1px solid
+        rgba(73, 24, 24, 0.25);
+
+    border-bottom:
+        1px solid
+        rgba(73, 24, 24, 0.25);
+}
+
+.book-spine::before {
+    top: 20px;
+}
+
+.book-spine::after {
+    bottom: 20px;
+}
+
+
+/* NUMBER */
+
+.spine-number {
+    position: absolute;
+
+    top: 31px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+
+    opacity: 0.7;
+}
+
+
+/* VERTICAL TITLE */
+
+.book-spine h3 {
+    margin: 0;
+
+    writing-mode: vertical-rl;
+
+    transform:
+        rotate(180deg);
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    line-height: 1.05;
+
+    text-align: center;
+}
+
+
+/* INDIVIDUAL BOOKS */
+
+.spine-japanese {
+    height: 285px;
+
+    background: #a68272;
+
+    color: #faf5ec;
+
+    transform:
+        rotate(-1deg);
+}
+
+.spine-world {
+    height: 305px;
+
+    background: #f1dfc8;
+
+    color: #491818;
+}
+
+.spine-light {
+    height: 270px;
+
+    background: #7f8e82;
+
+    color: #faf5ec;
+
+    transform:
+        rotate(0.7deg);
+}
+
+.spine-manga {
+    height: 295px;
+
+    background: #491818;
+
+    color: #faf5ec;
+}
+
+.spine-learning {
+    height: 310px;
+
+    background: #c8a46f;
+
+    color: #491818;
+
+    transform:
+        rotate(-0.5deg);
+}
+
+.spine-little {
+    height: 275px;
+
+    background: #d8baa9;
+
+    color: #491818;
+
+    transform:
+        rotate(0.6deg);
+}
+
+
+/* WOODEN SHELF */
+
+.book-shelf-board {
+    width: 100%;
+    height: 17px;
+
+    margin-top: -1px;
+
+    background: var(--deep-burgundy);
+
+    border:
+        1.5px solid
+        var(--almost-black);
+
+    border-radius:
+        2px;
+
+    box-shadow:
+        0 7px 0
+        rgba(161, 116, 83, 0.38);
+}
+
+
+/* HANDWRITTEN NOTE */
+
+.book-shelf-note {
+    margin: 20px auto 0;
+
+    text-align: center;
+
+    font-family:
+        "Caveat",
+        cursive;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    color:
+        rgba(73, 24, 24, 0.65);
+}
+
+
+/* =========================================================
+   BOOK CORNER — TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .book-shelf {
+        max-width: 650px;
+    }
+
+    .book-spines {
+        min-height: 270px;
+
+        gap: 6px;
+
+        padding:
+            0
+            12px;
+    }
+
+    .book-spine {
+        width: auto;
+
+        flex:
+            1 1 0;
+
+        min-width: 0;
+
+        padding:
+            15px
+            8px;
+    }
+
+    .book-spine h3 {
+        font-size: 16px;
+    }
+
+    .spine-japanese {
+        height: 245px;
+    }
+
+    .spine-world {
+        height: 260px;
+    }
+
+    .spine-light {
+        height: 230px;
+    }
+
+    .spine-manga {
+        height: 250px;
+    }
+
+    .spine-learning {
+        height: 265px;
+    }
+
+    .spine-little {
+        height: 235px;
+    }
+}
+
+
+/* =========================================================
+   BOOK CORNER — MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .books-section {
+        padding:
+            50px
+            16px
+            58px;
+    }
+
+    .book-shelf {
+        margin-top: 28px;
+    }
+
+    .book-spines {
+        min-height: 220px;
+
+        gap: 4px;
+
+        padding:
+            0
+            4px;
+    }
+
+    .book-spine {
+        padding:
+            12px
+            5px;
+
+        border-width:
+            1px;
+    }
+
+    .book-spine h3 {
+        font-size: 13px;
+    }
+
+    .spine-number {
+        top: 27px;
+
+        font-size: 6px;
+    }
+
+    .spine-japanese {
+        height: 200px;
+    }
+
+    .spine-world {
+        height: 215px;
+    }
+
+    .spine-light {
+        height: 185px;
+    }
+
+    .spine-manga {
+        height: 205px;
+    }
+
+    .spine-learning {
+        height: 220px;
+    }
+
+    .spine-little {
+        height: 190px;
+    }
+
+    .book-shelf-board {
+        height: 14px;
+    }
+
+    .book-shelf-note {
+        margin-top: 17px;
+
+        font-size: 15px;
+    }
+}
+/* =========================================================
+   MENU → BOOK CORNER TRANSITION
+========================================================= */
+
+.menu-books-divider {
+    min-height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 12px 24px;
+
+    background: var(--dusty-rose);
+
+    border-top: 1.5px solid var(--almost-black);
+    border-bottom: 1.5px solid var(--almost-black);
+
+    color: var(--deep-burgundy);
+}
+
+.menu-books-divider > span:first-child {
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2.4px;
+}
+
+.divider-symbol {
+    font-size: 14px;
+
+    opacity: 0.75;
+}
+
+
+/* Book Corner gets its own visual area */
+
+.books-section {
+    background-color: var(--light-cream);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+    .menu-books-divider {
+        min-height: 48px;
+
+        gap: 10px;
+
+        padding: 10px 16px;
+    }
+
+    .menu-books-divider > span:first-child {
+        font-size: 7.5px;
+
+        letter-spacing: 1.7px;
+    }
+
+    .divider-symbol {
+        font-size: 12px;
+    }
+
+}
+/* =========================================================
+   BOOKS → STAFF TRANSITION
+========================================================= */
+
+.books-section {
+    padding-bottom: 28px;
+}
+
+.books-staff-divider {
+    min-height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 12px 24px;
+
+    background: var(--dusty-rose);
+
+    border-top: 1.5px solid var(--almost-black);
+    border-bottom: 1.5px solid var(--almost-black);
+
+    color: var(--deep-burgundy);
+}
+
+.books-staff-divider > span:first-child {
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2.4px;
+}
+
+.books-staff-divider .divider-symbol {
+    font-size: 14px;
+
+    opacity: 0.75;
+}
+
+.staff-section {
+    padding-top: 38px;
+}
+
+
+@media (max-width: 760px) {
+
+    .books-section {
+        padding-bottom: 22px;
+    }
+
+    .books-staff-divider {
+        min-height: 48px;
+
+        gap: 10px;
+
+        padding: 10px 16px;
+    }
+
+    .books-staff-divider > span:first-child {
+        font-size: 7.5px;
+
+        letter-spacing: 1.7px;
+    }
+
+    .books-staff-divider .divider-symbol {
+        font-size: 12px;
+    }
+
+    .staff-section {
+        padding-top: 30px;
+    }
+
+}
+.staff-journal-divider {
+    min-height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 12px 24px;
+
+    background: var(--dusty-rose);
+
+    border-top: 1.5px solid var(--almost-black);
+    border-bottom: 1.5px solid var(--almost-black);
+
+    color: var(--deep-burgundy);
+}
+
+.staff-journal-divider > span:first-child {
+    font-family: "Fredoka", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+}
+
+.staff-journal-divider .divider-symbol {
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+.journal-section {
+    padding-top: 38px;
+}
+
+@media (max-width: 760px) {
+
+    .staff-journal-divider {
+        min-height: 48px;
+
+        gap: 10px;
+
+        padding: 10px 16px;
+    }
+
+    .staff-journal-divider > span:first-child {
+        font-size: 7.5px;
+        letter-spacing: 1.7px;
+    }
+
+    .staff-journal-divider .divider-symbol {
+        font-size: 12px;
+    }
+
+    .journal-section {
+        padding-top: 30px;
+    }
+}
+.staff-section {
+    padding-bottom: 28px;
+}
+/* =========================================================
+   JOURNAL → VISIT TRANSITION
+========================================================= */
+
+.journal-section {
+    padding-bottom: 28px;
+}
+
+.journal-visit-divider {
+    min-height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 12px 24px;
+
+    background: var(--dusty-rose);
+
+    border-top: 1.5px solid var(--almost-black);
+    border-bottom: 1.5px solid var(--almost-black);
+
+    color: var(--deep-burgundy);
+}
+
+.journal-visit-divider > span:first-child {
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2.4px;
+}
+
+.journal-visit-divider .divider-symbol {
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+.visit-section {
+    padding-top: 38px;
+}
+
+@media (max-width: 760px) {
+
+    .journal-section {
+        padding-bottom: 22px;
+    }
+
+    .journal-visit-divider {
+        min-height: 48px;
+
+        gap: 10px;
+
+        padding: 10px 16px;
+    }
+
+    .journal-visit-divider > span:first-child {
+        font-size: 7.5px;
+        letter-spacing: 1.7px;
+    }
+
+    .journal-visit-divider .divider-symbol {
+        font-size: 12px;
+    }
+
+    .visit-section {
+        padding-top: 30px;
+    }
+}
+/* =========================================================
+   LIBRARY CARD CTA
+========================================================= */
+
+.library-card-cta {
+    width: min(100%, 680px);
+
+    margin: 34px auto 0;
+    padding: 22px 24px 18px;
+
+    background: var(--light-cream);
+
+    border: 1.5px solid var(--almost-black);
+    border-radius: 6px;
+
+    box-shadow:
+        6px 7px 0
+        rgba(166, 130, 114, 0.4);
+
+    text-align: center;
+}
+
+.library-card-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--warm-brown);
+}
+
+.library-card-copy h3 {
+    margin: 0 0 8px;
+
+    font-size: 24px;
+
+    color: var(--deep-burgundy);
+}
+
+.library-card-copy p {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    color: rgba(25, 25, 24, 0.74);
+}
+
+.library-card-button {
+    width: fit-content;
+
+    margin: 18px auto 0;
+    padding: 10px 12px 10px 15px;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 18px;
+
+    background: var(--deep-burgundy);
+
+    border: 1.5px solid var(--almost-black);
+    border-radius: 3px;
+
+    box-shadow:
+        4px 4px 0
+        var(--dusty-rose);
+
+    color: var(--cream);
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.library-card-button b {
+    width: 24px;
+    height: 24px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--cream);
+    border-radius: 50%;
+
+    font-weight: 400;
+}
+
+.library-card-warning {
+    margin: 15px 0 0;
+
+    font-family: "Caveat", cursive;
+    font-size: 14px;
+    font-weight: 600;
+
+    color: rgba(73, 24, 24, 0.65);
+}
+
+
+@media (max-width: 760px) {
+
+    .library-card-cta {
+        margin-top: 27px;
+
+        padding:
+            20px
+            18px
+            17px;
+    }
+
+    .library-card-copy h3 {
+        font-size: 21px;
+    }
+
+    .library-card-copy p {
+        font-size: 12.5px;
+    }
+
+    .library-card-button {
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+    .library-card-warning {
+        font-size: 13px;
+    }
+
+}
+/* =========================================================
+   LIBRARY CARD CTA — COMPACT VERSION
+========================================================= */
+
+.library-card-cta {
+    width: min(100%, 460px);
+
+    margin: 24px auto 0;
+    padding: 15px 18px 13px;
+
+    box-shadow:
+        4px 5px 0
+        rgba(166, 130, 114, 0.32);
+}
+
+.library-card-label {
+    margin-bottom: 3px;
+
+    font-size: 7px;
+    letter-spacing: 1.7px;
+}
+
+.library-card-copy h3 {
+    margin-bottom: 5px;
+
+    font-size: 19px;
+}
+
+.library-card-copy p {
+    max-width: 390px;
+
+    font-size: 11.5px;
+    line-height: 1.45;
+}
+
+.library-card-button {
+    margin-top: 12px;
+
+    padding: 8px 10px 8px 12px;
+
+    gap: 14px;
+
+    font-size: 10.5px;
+}
+
+.library-card-button b {
+    width: 21px;
+    height: 21px;
+
+    font-size: 11px;
+}
+
+.library-card-warning {
+    margin-top: 10px;
+
+    font-size: 11.5px;
+}
+.books-section {
+    padding-bottom: 38px;
+}
+/* =========================================================
+   JOURNAL PAGINATION
+========================================================= */
+
+.journal-pagination {
+    width: min(100%, 1020px);
+
+    margin: 46px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+}
+
+
+.journal-page-button {
+    width: 36px;
+    height: 36px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0;
+
+    background: var(--paper);
+
+    border:
+        1.5px
+        solid
+        var(--deep-burgundy);
+
+    border-radius: 3px;
+
+    box-shadow:
+        3px
+        3px
+        0
+        rgba(73, 24, 24, 0.14);
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    color:
+        var(--deep-burgundy);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.18s ease,
+        background-color 0.18s ease,
+        color 0.18s ease;
+}
+
+
+.journal-page-button:hover {
+    transform: translateY(-2px);
+
+    background:
+        rgba(250, 245, 236, 0.92);
+}
+
+
+.journal-page-button.active {
+    background:
+        var(--deep-burgundy);
+
+    color:
+        var(--cream);
+
+    box-shadow:
+        3px
+        3px
+        0
+        var(--dusty-rose);
+}
+
+
+.journal-page-button.pagination-arrow {
+    font-size: 14px;
+}
+
+
+.journal-page-button:disabled {
+    opacity: 0.35;
+
+    cursor: default;
+
+    transform: none;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+    .journal-pagination {
+        margin-top: 38px;
+
+        gap: 6px;
+    }
+
+    .journal-page-button {
+        width: 33px;
+        height: 33px;
+
+        font-size: 10px;
+    }
+
+}
+/* =========================================================
+   CONTACT SERVICE — POST LINK
+========================================================= */
+
+.service-post-link {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    font-family: "Caveat", cursive;
+    font-size: 15px;
+    font-weight: 700;
+
+    color: var(--deep-burgundy);
+
+    text-decoration: none;
+
+    transition: transform 0.18s ease;
+}
+
+.service-post-link:hover {
+    transform: translateX(3px);
+}
+/* =========================================================
+   HERO — DON'T STEAL THE CATS SIGN
+========================================================= */
+
+.window-cat-warning {
+    position: absolute;
+    top: 44%;
+    right: 10%;
+    z-index: 4;
+
+    width: 105px;
+    padding: 9px 8px;
+
+    background: #f3e8d4;
+
+    border: 1.5px solid var(--almost-black);
+
+    box-shadow:
+        3px 3px 0
+        rgba(25, 25, 24, 0.10);
+
+    text-align: center;
+
+    transform: rotate(1.5deg);
+}
+
+.window-cat-warning small {
+    display: block;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 6px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+
+    color: var(--warm-brown);
+}
+
+.window-cat-warning strong {
+    display: block;
+
+    margin-top: 4px;
+
+    font-family: "Caveat", cursive;
+    font-size: 17px;
+    line-height: 0.95;
+
+    color: var(--deep-burgundy);
+}
+
+.window-cat-warning span {
+    display: block;
+
+    margin-top: 5px;
+
+    font-family: "Caveat", cursive;
+    font-size: 11px;
+
+    color: var(--warm-brown);
+}
+/* =========================================================
+   CATS → MENU TRANSITION
+========================================================= */
+
+.cats-section {
+    padding-bottom: 28px;
+}
+
+.cats-menu-divider {
+    min-height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 12px 24px;
+
+    background: var(--dusty-rose);
+
+    border-top: 1.5px solid var(--almost-black);
+    border-bottom: 1.5px solid var(--almost-black);
+
+    color: var(--deep-burgundy);
+}
+
+.cats-menu-divider > span:first-child {
+    font-family: "Fredoka", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2.4px;
+}
+
+.cats-menu-divider .divider-symbol {
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+.menu-section {
+    padding-top: 38px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+    .cats-section {
+        padding-bottom: 22px;
+    }
+
+    .cats-menu-divider {
+        min-height: 48px;
+
+        gap: 10px;
+
+        padding: 10px 16px;
+    }
+
+    .cats-menu-divider > span:first-child {
+        font-size: 7.5px;
+        letter-spacing: 1.7px;
+    }
+
+    .cats-menu-divider .divider-symbol {
+        font-size: 12px;
+    }
+
+    .menu-section {
+        padding-top: 30px;
+    }
+}
+/* BOOK CORNER — REDUCE SPACE AFTER DIVIDER */
+
+.books-section {
+    padding-top: 30px;
+}
+
+.books-section .section-heading {
+    margin-bottom: 24px;
+}
+
+@media (max-width: 760px) {
+
+    .books-section {
+        padding-top: 24px;
+    }
+
+    .books-section .section-heading {
+        margin-bottom: 20px;
+    }
+
+}

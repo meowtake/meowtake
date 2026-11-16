@@ -1,6 +1,6 @@
 /* =========================================================
-   MEOWTAKE'S CAT & BOOK CAFÉ
-   CLEAN SCRIPT
+   MEOWTAKÉ'S CAT & BOOK CAFÉ
+   MAIN SCRIPT
 ========================================================= */
 
 (function () {
@@ -11,43 +11,83 @@
        1. MOBILE NAVIGATION
     ===================================================== */
 
-    const menuButton = document.querySelector(".menu-toggle");
-    const navigation = document.querySelector(".main-nav");
+    const menuButton =
+        document.querySelector(".menu-toggle");
+
+    const navigation =
+        document.querySelector(".main-nav");
+
 
     if (menuButton && navigation) {
-        const closeNavigation = function () {
-            navigation.classList.remove("active");
-            menuButton.setAttribute("aria-expanded", "false");
-        };
 
-        menuButton.addEventListener("click", function () {
-            const isOpen = navigation.classList.toggle("active");
+        const closeNavigation = function () {
+
+            navigation.classList.remove("active");
 
             menuButton.setAttribute(
                 "aria-expanded",
-                String(isOpen)
+                "false"
             );
-        });
+
+        };
 
 
-        navigation.querySelectorAll("a").forEach(function (link) {
-            link.addEventListener("click", closeNavigation);
-        });
+        menuButton.addEventListener(
+            "click",
+            function () {
+
+                const isOpen =
+                    navigation.classList.toggle(
+                        "active"
+                    );
 
 
-        document.addEventListener("keydown", function (event) {
-            if (event.key === "Escape") {
-                closeNavigation();
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    String(isOpen)
+                );
+
             }
-        });
+        );
 
 
-        window.addEventListener("resize", function () {
-            if (window.innerWidth > 760) {
-                closeNavigation();
+        navigation
+            .querySelectorAll("a")
+            .forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    closeNavigation
+                );
+
+            });
+
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (event.key === "Escape") {
+                    closeNavigation();
+                }
+
             }
-        });
+        );
+
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                if (window.innerWidth > 760) {
+                    closeNavigation();
+                }
+
+            }
+        );
+
     }
+
 
 
     /* =====================================================
@@ -55,69 +95,107 @@
     ===================================================== */
 
     const menuFilters =
-        document.querySelectorAll(".menu-filter");
+        document.querySelectorAll(
+            ".menu-filter"
+        );
 
     const menuCategories =
-        document.querySelectorAll(".menu-category");
+        document.querySelectorAll(
+            ".menu-category"
+        );
 
 
-    if (menuFilters.length && menuCategories.length) {
+    if (
+        menuFilters.length &&
+        menuCategories.length
+    ) {
 
-        menuFilters.forEach(function (button) {
+        menuFilters.forEach(
+            function (button) {
 
-            button.addEventListener("click", function () {
+                button.addEventListener(
+                    "click",
+                    function () {
 
-                const selectedCategory =
-                    button.dataset.filter;
-
-
-                menuFilters.forEach(function (filter) {
-                    filter.classList.remove("active");
-                });
-
-
-                button.classList.add("active");
+                        const selectedCategory =
+                            button.dataset.filter;
 
 
-                menuCategories.forEach(function (category) {
+                        menuFilters.forEach(
+                            function (filter) {
 
-                    const categoryType =
-                        category.dataset.category;
+                                filter.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
 
 
-                    const shouldShow =
-                        selectedCategory === "all" ||
-                        selectedCategory === categoryType;
+                        button.classList.add(
+                            "active"
+                        );
 
 
-                    category.classList.toggle(
-                        "hidden",
-                        !shouldShow
-                    );
+                        menuCategories.forEach(
+                            function (category) {
 
-                });
+                                const categoryType =
+                                    category.dataset.category;
 
-            });
 
-        });
+                                const shouldShow =
+                                    selectedCategory === "all" ||
+                                    selectedCategory === categoryType;
+
+
+                                category.classList.toggle(
+                                    "hidden",
+                                    !shouldShow
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+            }
+        );
 
     }
 
 
+
     /* =====================================================
        3. JOURNAL
-       - SORT NEWEST → OLDEST
-       - FILTER BY CATEGORY
+       SORT + FILTER + PAGINATION
     ===================================================== */
 
     const journalGrid =
-        document.querySelector(".journal-archive-grid");
+        document.querySelector(
+            ".journal-archive-grid"
+        );
 
     const journalFilters =
-        document.querySelectorAll(".journal-filter");
+        document.querySelectorAll(
+            ".journal-filter"
+        );
+
+    const journalPagination =
+        document.querySelector(
+            ".journal-pagination"
+        );
 
 
     if (journalGrid) {
+
+        const POSTS_PER_PAGE = 4;
+
+        let currentPage = 1;
+
+        let currentCategory = "all";
+
 
         const journalCards = Array.from(
             journalGrid.querySelectorAll(
@@ -126,82 +204,384 @@
         );
 
 
-        /* SORT */
+        /* -----------------------------------------
+           SORT NEWEST → OLDEST
+        ----------------------------------------- */
 
-        journalCards.sort(function (a, b) {
+        journalCards.sort(
+            function (a, b) {
 
-            const dateA =
-                a.dataset.date || "";
+                const dateA =
+                    a.dataset.date || "";
 
-            const dateB =
-                b.dataset.date || "";
-
-
-            return dateB.localeCompare(dateA);
-
-        });
+                const dateB =
+                    b.dataset.date || "";
 
 
-        journalCards.forEach(function (card) {
-            journalGrid.appendChild(card);
-        });
+                return dateB.localeCompare(
+                    dateA
+                );
+
+            }
+        );
 
 
-        /* FILTER */
+        journalCards.forEach(
+            function (card) {
 
-        journalFilters.forEach(function (button) {
+                journalGrid.appendChild(
+                    card
+                );
 
-            button.addEventListener("click", function () {
-
-                const selectedCategory =
-                    button.dataset.journalFilter;
-
-
-                journalFilters.forEach(function (filter) {
-                    filter.classList.remove("active");
-                });
+            }
+        );
 
 
-                button.classList.add("active");
 
+        /* -----------------------------------------
+           GET FILTERED POSTS
+        ----------------------------------------- */
 
-                journalCards.forEach(function (card) {
+        function getFilteredCards() {
 
-                    const cardCategory =
-                        card.dataset.journalCategory;
+            return journalCards.filter(
+                function (card) {
 
-
-                    const shouldShow =
-                        selectedCategory === "all" ||
-                        selectedCategory === cardCategory;
-
-
-                    card.classList.toggle(
-                        "hidden",
-                        !shouldShow
+                    return (
+                        currentCategory === "all" ||
+                        card.dataset.journalCategory ===
+                            currentCategory
                     );
 
-                });
+                }
+            );
 
-            });
+        }
 
-        });
+
+
+        /* -----------------------------------------
+           SHOW CURRENT PAGE
+        ----------------------------------------- */
+
+        function renderJournalPage() {
+
+            const filteredCards =
+                getFilteredCards();
+
+
+            const totalPages =
+                Math.max(
+                    1,
+                    Math.ceil(
+                        filteredCards.length /
+                        POSTS_PER_PAGE
+                    )
+                );
+
+
+            if (currentPage > totalPages) {
+                currentPage = totalPages;
+            }
+
+
+            const startIndex =
+                (currentPage - 1) *
+                POSTS_PER_PAGE;
+
+
+            const endIndex =
+                startIndex +
+                POSTS_PER_PAGE;
+
+
+            /* hide everything first */
+
+            journalCards.forEach(
+                function (card) {
+
+                    card.classList.add(
+                        "hidden"
+                    );
+
+                }
+            );
+
+
+            /* show only current 4 */
+
+            filteredCards
+                .slice(
+                    startIndex,
+                    endIndex
+                )
+                .forEach(
+                    function (card) {
+
+                        card.classList.remove(
+                            "hidden"
+                        );
+
+                    }
+                );
+
+
+            renderPagination(
+                totalPages
+            );
+
+        }
+
+
+
+        /* -----------------------------------------
+           CREATE PAGE BUTTON
+        ----------------------------------------- */
+
+        function createPageButton(
+            label,
+            page,
+            options = {}
+        ) {
+
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+
+            button.type = "button";
+
+            button.className =
+                "journal-page-button";
+
+
+            if (options.arrow) {
+
+                button.classList.add(
+                    "pagination-arrow"
+                );
+
+            }
+
+
+            button.textContent =
+                label;
+
+
+            if (page === currentPage) {
+
+                button.classList.add(
+                    "active"
+                );
+
+            }
+
+
+            if (options.disabled) {
+
+                button.disabled =
+                    true;
+
+            }
+
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    if (
+                        button.disabled ||
+                        page === currentPage
+                    ) {
+                        return;
+                    }
+
+
+                    currentPage =
+                        page;
+
+
+                    renderJournalPage();
+
+
+                    const archiveTop =
+                        document.querySelector(
+                            ".journal-archive"
+                        );
+
+
+                    if (archiveTop) {
+
+                        archiveTop.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+
+                    }
+
+                }
+            );
+
+
+            return button;
+
+        }
+
+
+
+        /* -----------------------------------------
+           PAGINATION
+        ----------------------------------------- */
+
+        function renderPagination(
+            totalPages
+        ) {
+
+            if (!journalPagination) {
+                return;
+            }
+
+
+            journalPagination.innerHTML =
+                "";
+
+
+            /* no pagination needed */
+
+            if (totalPages <= 1) {
+
+                journalPagination.style.display =
+                    "none";
+
+                return;
+
+            }
+
+
+            journalPagination.style.display =
+                "flex";
+
+
+            /* PREVIOUS */
+
+            journalPagination.appendChild(
+                createPageButton(
+                    "←",
+                    Math.max(
+                        1,
+                        currentPage - 1
+                    ),
+                    {
+                        arrow: true,
+                        disabled:
+                            currentPage === 1
+                    }
+                )
+            );
+
+
+            /* PAGE NUMBERS */
+
+            for (
+                let page = 1;
+                page <= totalPages;
+                page++
+            ) {
+
+                journalPagination.appendChild(
+                    createPageButton(
+                        String(page),
+                        page
+                    )
+                );
+
+            }
+
+
+            /* NEXT */
+
+            journalPagination.appendChild(
+                createPageButton(
+                    "→",
+                    Math.min(
+                        totalPages,
+                        currentPage + 1
+                    ),
+                    {
+                        arrow: true,
+                        disabled:
+                            currentPage ===
+                            totalPages
+                    }
+                )
+            );
+
+        }
+
+
+
+        /* -----------------------------------------
+           FILTER BUTTONS
+        ----------------------------------------- */
+
+        journalFilters.forEach(
+            function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        currentCategory =
+                            button.dataset
+                                .journalFilter;
+
+
+                        currentPage = 1;
+
+
+                        journalFilters.forEach(
+                            function (filter) {
+
+                                filter.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                        button.classList.add(
+                            "active"
+                        );
+
+
+                        renderJournalPage();
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* FIRST LOAD */
+
+        renderJournalPage();
 
     }
 
 
+
     /* =====================================================
        4. FEATURED JOURNAL POST
-       Newest post from:
-       - Behind the Counter
-       - Your Stories
-       - Pawsonnel Updates
-
-       News is intentionally excluded.
+       NEWS IS EXCLUDED
     ===================================================== */
 
     const featuredPost =
-        document.querySelector(".featured-journal-post");
+        document.querySelector(
+            ".featured-journal-post"
+        );
 
 
     if (featuredPost) {
@@ -217,35 +597,41 @@
             document.querySelectorAll(
                 ".journal-post-card"
             )
-        ).filter(function (post) {
+        ).filter(
+            function (post) {
 
-            return allowedFeaturedCategories.includes(
-                post.dataset.journalCategory
-            );
+                return allowedFeaturedCategories.includes(
+                    post.dataset
+                        .journalCategory
+                );
 
-        });
+            }
+        );
 
 
         if (eligiblePosts.length) {
 
-            eligiblePosts.sort(function (a, b) {
+            eligiblePosts.sort(
+                function (a, b) {
 
-                const dateA =
-                    a.dataset.date || "";
+                    const dateA =
+                        a.dataset.date || "";
 
-                const dateB =
-                    b.dataset.date || "";
-
-
-                return dateB.localeCompare(dateA);
-
-            });
+                    const dateB =
+                        b.dataset.date || "";
 
 
-            const newestPost = eligiblePosts[0];
+                    return dateB.localeCompare(
+                        dateA
+                    );
+
+                }
+            );
 
 
-            /* SOURCE DATA */
+            const newestPost =
+                eligiblePosts[0];
+
 
             const newestCategory =
                 newestPost.querySelector(
@@ -255,13 +641,18 @@
 
             const newestDate =
                 newestPost.dataset.date
-                    ? newestPost.dataset.date.replaceAll("-", ".")
+                    ? newestPost.dataset.date
+                        .replaceAll(
+                            "-",
+                            "."
+                        )
                     : "";
 
 
             const newestTitle =
-                newestPost.querySelector("h3")
-                    ?.textContent.trim() || "";
+                newestPost.querySelector(
+                    "h3"
+                )?.textContent.trim() || "";
 
 
             const newestDescription =
@@ -282,7 +673,6 @@
                 );
 
 
-            /* FEATURED ELEMENTS */
 
             const featuredBadge =
                 featuredPost.querySelector(
@@ -332,55 +722,77 @@
                 );
 
 
-            /* TEXT */
 
             if (featuredBadge) {
+
                 featuredBadge.textContent =
                     "LATEST POST";
+
             }
 
 
             if (featuredDate) {
+
                 featuredDate.textContent =
                     newestDate;
+
             }
 
 
             if (featuredCategory) {
+
                 featuredCategory.textContent =
                     newestCategory;
+
             }
 
 
             if (featuredTitle) {
+
                 featuredTitle.textContent =
                     newestTitle;
+
             }
 
 
             if (featuredDescription) {
+
                 featuredDescription.textContent =
                     newestDescription;
+
             }
+
 
 
             /* LINK */
 
-            if (featuredLink && newestLink) {
+            if (
+                featuredLink &&
+                newestLink
+            ) {
 
                 featuredLink.href =
                     newestLink.href;
 
 
                 featuredLink.target =
-                    newestLink.target || "_self";
+                    newestLink.target ||
+                    "_self";
 
 
                 if (newestLink.rel) {
+
                     featuredLink.rel =
                         newestLink.rel;
-                } else {
-                    featuredLink.removeAttribute("rel");
+
+                }
+
+                else {
+
+                    featuredLink.removeAttribute(
+                        "rel"
+                    );
+
                 }
 
 
@@ -401,6 +813,7 @@
             }
 
 
+
             /* IMAGE */
 
             if (
@@ -414,7 +827,8 @@
 
 
                 featuredImage.alt =
-                    newestImage.alt || newestTitle;
+                    newestImage.alt ||
+                    newestTitle;
 
 
                 featuredImageWrapper.style.display =
@@ -427,7 +841,9 @@
 
             }
 
-            else if (featuredImageWrapper) {
+            else if (
+                featuredImageWrapper
+            ) {
 
                 featuredImageWrapper.style.display =
                     "none";
